@@ -8,7 +8,7 @@ get_header();
 
     <!-- Page Head -->
     <?php get_template_part("banners/default_page_banner"); ?>
-<h1>Home Parent (Home city Template)</h1>
+<!-- <h1>Home Parent (Home city Template)</h1> -->
     <!-- Content -->
     <div class="container contents single">
         <div class="row">
@@ -17,6 +17,8 @@ get_header();
                 <div class="main">
 
                     <div class="inner-wrapper">
+                    <h1 class="page-title text-center"><?php wp_title(''); ?></h1>
+
 
                     <!--========================================
                     =            This is Moose Loop            =
@@ -49,29 +51,54 @@ get_header();
 
                         <?php endif; ?>
 
+                           <?php 
+                                // The Loop
 
-                        <?php 
-                            // The Loop
+                                if ( $the_query->have_posts() ) :
 
-                            if ( $the_query->have_posts() ) :
+                                    while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                            while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                                    <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
+                                    <div class="row-fluid main-loop">
 
-                                <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
-                                 <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                <hr/>                              
-                              
+                                        <div class="span5">
+                                                
+                                            <?php if ( has_post_thumbnail() ) : ?> 
+                                                
+                                                <div class="featured-img">
+                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'large', array('class' => 'img-responsive'));  ?></a>
 
-                            <?php 
-                            endwhile;
+                                                </div>
+                                            <?php else : ?> 
+                                               
+                                                    <a href="<?php the_permalink(); ?>" title=""><img class="img-responsive" src="/wp-content/uploads/2016/08/mical-default-img.jpg" alt=""></a>
 
-                            endif;
+                                            <?php endif; ?>
+                                        
+                                        </div>
 
-                            // Reset Post Data
+                                        <div class="span7">
 
-                            wp_reset_postdata();
+                                            <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                            <hr/>   
+                                                                       
+                                            <?php the_excerpt(); ?>     
+                                            <a class="btn btn-danger pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
+                                        </div>  
 
-                        ?>
+
+                                    </div>  <!-- END ROW FLUID -->      
+                                        
+                                <?php 
+                                    endwhile;
+
+                                endif;
+
+                                // Reset Post Data
+
+                                wp_reset_postdata();
+
+                            ?>
 
                     </article>
 

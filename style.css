@@ -111,6 +111,15 @@ a img.aligncenter {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
+.main .page-title {
+  font-variant: small-caps;
+  color: gray; }
+.main .main-loop {
+  padding-top: 3rem; }
+  .main .main-loop .post-title {
+    font-variant: small-caps;
+    color: gray !important; }
+
 /**
  *
  * Todays Date: 3 Aug 2016

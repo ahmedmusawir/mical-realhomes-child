@@ -17,3 +17,20 @@ body {
 	// display: none;
 	// color: red;
 }
+
+.main {
+
+	.page-title {
+		font-variant: small-caps;
+		color: gray;
+	}
+	.main-loop {
+		// border: 1px solid red;
+		padding-top: 3rem;
+
+		.post-title {
+			font-variant: small-caps;
+			color: gray !important;
+		}
+	}
+}
