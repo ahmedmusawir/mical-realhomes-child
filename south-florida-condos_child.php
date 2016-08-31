@@ -14,7 +14,7 @@ get_header();
 
     <!-- Page Head -->
     <?php get_template_part("banners/default_page_banner"); ?>
-<h1>FL Condo Child ( Community Single Page w sidebar)</h1>
+<!-- <h1>FL HOme Child ( Community Single Page w sidebar)</h1> -->
     <!-- Content -->
     <div class="container contents single">
         <div class="row">
@@ -46,7 +46,11 @@ get_header();
                                             the_post_thumbnail('post-featured-image');
                                             echo '</a>';
                                         }
+                                        ?>
+                                            <hr/>
 
+                                        <?php
+                                            
                                         the_content();
 
                                         // WordPress Link Pages

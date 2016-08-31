@@ -114,8 +114,19 @@ a img.aligncenter {
 .main .page-title {
   font-variant: small-caps;
   color: gray; }
+.main .page-top-img img {
+  margin: 0 auto;
+  display: block;
+  clear: both;
+  width: 100%; }
 .main .main-loop {
   padding-top: 3rem; }
+  .main .main-loop .featured-img img:hover {
+    opacity: .5; }
+  .main .main-loop .span4 .btn {
+    min-height: 75px; }
+  .main .main-loop .link-block {
+    padding-top: 4rem; }
   .main .main-loop .post-title {
     font-variant: small-caps;
     color: gray !important; }

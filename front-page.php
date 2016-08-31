@@ -57,7 +57,7 @@ get_header();
                                             <?php if ( has_post_thumbnail() ) : ?> 
                                                 
                                                 <div class="featured-img">
-                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'full', array('class' => 'img-responsive'));  ?></a>
+                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'custom-post-index', array('class' => 'img-responsive'));  ?></a>
 
                                                 </div>
                                             <?php else : ?> 
@@ -73,7 +73,7 @@ get_header();
 
                                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                             <hr/>                              
-                                            <?php the_content(); ?>     
+                                            <?php the_excerpt(); ?>     
                                             <a class="btn btn-danger pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
                                         </div>  
 

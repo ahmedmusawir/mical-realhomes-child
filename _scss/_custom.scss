@@ -24,9 +24,41 @@ body {
 		font-variant: small-caps;
 		color: gray;
 	}
+
+	.page-top-img {
+		img {
+			margin: 0 auto;
+			display: block;
+			clear: both;
+			// border: 2px solid red;
+			width: 100%;
+		}
+	}
+
 	.main-loop {
 		// border: 1px solid red;
 		padding-top: 3rem;
+
+		.featured-img {
+			img {
+				&:hover {
+					opacity: .5;
+				}
+			}
+		}
+
+		.span4 {
+			.btn {
+				min-height: 75px;
+			}
+		}
+
+		.link-block {
+			// margin-top: 3rem;
+			// border: 1px solid red;
+			padding-top: 4rem;
+		}
+
 
 		.post-title {
 			font-variant: small-caps;

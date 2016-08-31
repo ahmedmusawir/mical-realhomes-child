@@ -1,28 +1,162 @@
 <?php
+/*
+*  Template Name: Archive South Florida Condo 
+*/
+
 get_header();
 ?>
 
-<!-- Page Head -->
-<?php get_template_part("banners/blog_page_banner"); ?>
-<!-- Content -->
-<h1>This South Florida Condos Archive Temp</h1>
-<div class="container contents blog-page">
-    <div class="row">
-        <div class="span9 main-wrap">
-            <!-- Main Content -->
-            <div class="main">
+    <!-- Page Head -->
+    <?php get_template_part("banners/default_page_banner"); ?>
+<!-- <h1>Archive S Fl condos</h1> -->
+    <!-- Content -->
+    <div class="container contents single">
+        <div class="row">
+            <div class="span12 main-wrap">
+                <!-- Main Content -->
+                <div class="main">
 
-                <div class="inner-wrapper">
-                    <?php  get_template_part("loop");  ?>
-                </div>
+                    <div class="inner-wrapper">
+                    <h1 class="page-title text-center">South Florida Condos</h1>
 
-            </div><!-- End Main Content -->
+                    <!--========================================
+                    =            This is Moose Loop            =
+                    =========================================-->
+                    
+                    <?php 
 
-        </div> <!-- End span9 -->
+                        $args = array(
+                            'post_type' => 'south-florida-condos',
+                            'posts_per_page' => -1,
+                            'post_status' => 'publish',
+                            'order' => 'ASC',
+                            'post_parent' => 0
+                        );
+                        $the_query = new WP_Query( $args ); 
 
-        <?php get_sidebar(); ?>
+                        // print_r( $the_query );
 
-    </div><!-- End contents row -->
-</div><!-- End Content -->
+                    ?>
+
+                
+                    <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
+
+
+                            <?php 
+                                // The Loop
+
+                                if ( $the_query->have_posts() ) :
+
+                                    while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                                    <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
+                                    <div class="row-fluid main-loop">
+
+                                        <div class="span5">
+                                                
+                                            <?php if ( has_post_thumbnail() ) : ?> 
+                                                
+                                                <div class="featured-img">
+                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'custom-post-index', array('class' => 'img-responsive'));  ?></a>
+
+                                                </div>
+                                            <?php else : ?> 
+                                               
+                                                    <a href="<?php the_permalink(); ?>" title=""><img class="img-responsive" src="/wp-content/uploads/2016/08/mical-default-img.jpg" alt=""></a>
+
+
+                                            <?php endif; ?>
+                                        
+                                        </div> <!-- SPAN 5 -->
+
+                                        <div class="span7">
+
+                                            <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                            <hr>                              
+                                            <?php the_excerpt(); ?>     
+                                            <a class="btn btn-danger pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
+                                            
+                                           <!--  <div class="link-block row-fluid text-center">
+
+                                                <article class="span4">     
+                                                    <a class="btn" href="/condo-city-2/">
+                                                        Lauderdale By The Sea Condos
+                                                    </a>
+                                                </article>
+
+                                                <article class="span4">
+                                                    <a class="btn" href="/condo-city-3/">
+                                                        Bay Harbor Islands Condos
+                                                    </a>
+
+                                                </article>
+                                                <article class="span4">
+                                                    <a class="btn" href="/condo-city-1/">
+                                                        North Miami Beach Condos
+                                                    </a>
+                                                </article>
+
+                                            </div>  -->
+                                            <!-- LINK BLOCK -->
+
+
+
+                                        </div>  <!-- SPAN 7 -->
+
+                                    </div>  <!-- END ROW FLUID -->      
+                                        
+                                <?php 
+                                    endwhile;
+
+                                endif;
+
+                                // Reset Post Data
+
+                                wp_reset_postdata();
+
+                            ?>
+
+
+                    </article>
+
+                    <!--====================================================
+                    =            This is the theme default loop            =
+                    =====================================================-->
+                    
+                        <?php
+                        if ( have_posts() ) :
+                            while ( have_posts() ) :
+                                the_post();
+                                ?>
+                                <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
+                                        <?php
+                                        $title_display = get_post_meta( $post->ID, 'REAL_HOMES_page_title_display', true );
+                                        if( $title_display != 'hide' ){
+                                            ?>
+                                            <h3 class="post-title"><?php //the_title(); ?></h3>
+                                            <hr/>
+                                            <?php
+                                        }
+
+                                        //the_content();
+
+                                        // WordPress Link Pages
+                                        wp_link_pages(array('before' => '<div class="pages-nav clearfix">', 'after' => '</div>', 'next_or_number' => 'next'));
+                                        ?>
+                                </article>
+                                <?php
+                            endwhile;
+                            comments_template();
+                        endif;
+                        ?>
+                    </div>
+
+                </div><!-- End Main Content -->
+
+            </div> <!-- End span12 -->
+
+        </div><!-- End contents row -->
+
+    </div><!-- End Content -->
 
 <?php get_footer(); ?>

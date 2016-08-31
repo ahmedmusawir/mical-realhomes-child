@@ -13,6 +13,15 @@ function moose_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'moose_scripts' );
 
+/**
+ *
+ * Adding Cutom Image Size
+ *
+ */
+// add_theme_support( 'post-thumbnails' );
+add_image_size( 'custom-post-index', 450, 300, true ); // Hard Crop Mode
+// add_image_size( 'homepage-thumb', 220, 180 ); // Soft Crop Mode
+// add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
 
 /**
  *
@@ -54,7 +63,7 @@ function create_post_type() {
 	    'south-florida-condos',
 	    array(
 	        'hierarchical' => true,
-	        // 'capability_type' => 'page',
+	        'capability_type' => 'page',
 	        'public' => true,
 	        'rewrite' => array(
 	            'slug'       => 'south-florida-condos',
@@ -73,7 +82,7 @@ function create_post_type() {
 		        'parent' => 'Parent'		        
 		    ),
 		    // 'public' => true,
-		    'has_archive' => true,	        
+		    'has_archive' => true	        
 			        // Other arguments
 			)
 	);

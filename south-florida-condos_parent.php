@@ -1,16 +1,6 @@
 <?php
-/**
- * The template for displaying all single posts.
- * Template Name: FL City Template
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Moose_Framework
- */
-
-get_header(); ?>
-<?php
 /*
-*  Template Name: Full Width Template
+*  Home Parent Template
 */
 
 get_header();
@@ -18,7 +8,7 @@ get_header();
 
     <!-- Page Head -->
     <?php get_template_part("banners/default_page_banner"); ?>
-<h1>Condos Parent (City Temp)</h1>
+<!-- <h1>Home Parent (Home city Template)</h1> -->
     <!-- Content -->
     <div class="container contents single">
         <div class="row">
@@ -27,6 +17,20 @@ get_header();
                 <div class="main">
 
                     <div class="inner-wrapper">
+                    <h1 class="page-title text-center"><?php wp_title(''); ?></h1>
+                   
+                        <?php if ( has_post_thumbnail() ) : ?> 
+                            
+                            <div class="page-top-img">
+                                <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'full', array('class' => 'img-responsive'));  ?></a>
+
+                            </div>
+
+                        <?php endif; ?>
+                    <!--====================================================
+                    =            This is the theme default loop            =
+                    =====================================================-->
+                    
                         <?php
                         if ( have_posts() ) :
                             while ( have_posts() ) :
@@ -37,7 +41,7 @@ get_header();
                                         $title_display = get_post_meta( $post->ID, 'REAL_HOMES_page_title_display', true );
                                         if( $title_display != 'hide' ){
                                             ?>
-                                            <h3 class="post-title"><?php the_title(); ?></h3>
+                                            <h3 class="post-title"><?php //the_title(); ?></h3>
                                             <hr/>
                                             <?php
                                         }
@@ -52,8 +56,84 @@ get_header();
                             endwhile;
                             comments_template();
                         endif;
-                        ?>
-                    </div>
+                        ?>                                            
+
+                    <hr>
+                    <!--========================================
+                    =            This is Moose Loop            =
+                    =========================================-->
+                    
+                    <?php 
+
+                        $args = array(
+                            'post_type' => 'south-florida-condos',
+                            'posts_per_page' => -1,
+                            'post_status' => 'publish',
+                            'order' => 'ASC',
+                            'post_parent' => get_the_ID()
+                        );
+                        $the_query = new WP_Query( $args ); 
+
+                        // print_r( $the_query );
+
+                    ?>
+
+                
+                    <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
+ 
+                           <?php 
+                                // The Loop
+
+                                if ( $the_query->have_posts() ) :
+
+                                    while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                                    <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
+                                    <div class="row-fluid main-loop">
+
+                                        <div class="span5">
+                                                
+                                            <?php if ( has_post_thumbnail() ) : ?> 
+                                                
+                                                <div class="featured-img">
+                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'custom-post-index', array('class' => 'img-responsive'));  ?></a>
+
+                                                </div>
+                                            <?php else : ?> 
+                                               
+                                                    <a href="<?php the_permalink(); ?>" title=""><img class="img-responsive" src="/wp-content/uploads/2016/08/mical-default-img.jpg" alt=""></a>
+
+                                            <?php endif; ?>
+                                        
+                                        </div>
+
+                                        <div class="span7">
+
+                                            <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                            <hr/>   
+                                                                       
+                                            <?php the_excerpt(); ?>     
+                                            <a class="btn btn-danger pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
+                                        </div>  
+
+
+                                    </div>  <!-- END ROW FLUID -->      
+                                        
+                                <?php 
+                                    endwhile;
+
+                                endif;
+
+                                // Reset Post Data
+
+                                wp_reset_postdata();
+
+                            ?>
+
+                    </article>
+
+ 
+                    </div> <!-- END inner-wrapper -->
 
                 </div><!-- End Main Content -->
 
@@ -64,5 +144,3 @@ get_header();
     </div><!-- End Content -->
 
 <?php get_footer(); ?>
-<?php
-get_footer();
