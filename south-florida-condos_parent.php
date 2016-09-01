@@ -12,7 +12,9 @@ get_header();
     <!-- Content -->
     <div class="container contents single">
         <div class="row">
-            <div class="span12 main-wrap">
+            <?php get_sidebar('condominium'); ?>
+
+            <div class="span9 main-wrap">
                 <!-- Main Content -->
                 <div class="main">
 

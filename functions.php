@@ -23,6 +23,195 @@ add_image_size( 'custom-post-index', 450, 300, true ); // Hard Crop Mode
 // add_image_size( 'homepage-thumb', 220, 180 ); // Soft Crop Mode
 // add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
 
+
+/**
+ *
+ * OverRiding Sidebars
+ *
+ */
+
+if ( ! function_exists( 'inspiry_theme_sidebars' ) ) {
+	/**
+	 * Sidebars, Footer and other Widget areas
+	 */
+	function inspiry_theme_sidebars() {
+
+
+
+		// Location: Sidebar Homes
+		register_sidebar( array(
+			'name' => __( 'Homes Sidebar', 'framework' ),
+			'id' => 'homes-page-sidebar',
+			'description' => __( 'Widget area for default homes template sidebar.', 'framework' ),
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="title">',
+			'after_title' => '</h3>'
+		) );
+	
+		// Location: Sidebar Condos
+		// register_sidebar( array(
+		// 	'name' => __( 'Condos Sidebar', 'framework' ),
+		// 	'id' => 'condo-page-sidebar',
+		// 	'description' => __( 'Widget area for default condos template sidebar.', 'framework' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+		// 	'after_widget' => '</section>',
+		// 	'before_title' => '<h3 class="title">',
+		// 	'after_title' => '</h3>'
+		// ) );
+
+		// Location: Sidebar for contact page
+		register_sidebar( array(
+			'name' => __( 'Codominium Sidebar', 'framework' ),
+			'id' => 'condominium-sidebar',
+			'description' => __( 'Widget area for contact page sidebar.', 'framework' ),
+			'before_widget' => '<section class="widget clearfix %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="title">',
+			'after_title' => '</h3>'
+		) );
+
+		// Location: Default Sidebar
+		register_sidebar( array(
+			'name' => __( 'General Sidebar', 'framework' ),
+			'id' => 'general-sidebar',
+			'description' => __( 'Widget area for default sidebar on news and post pages.', 'framework' ),
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="title">',
+			'after_title' => '</h3>'
+		) );		
+
+		// Location: Sidebar Property
+		// register_sidebar( array(
+		// 	'name' => __( 'Property Sidebar', 'framework' ),
+		// 	'id' => 'property-sidebar',
+		// 	'description' => __( 'Widget area for property detail page sidebar.', 'framework' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+		// 	'after_widget' => '</section>',
+		// 	'before_title' => '<h3 class="title">',
+		// 	'after_title' => '</h3>'
+		// ) );
+
+		// Location: Sidebar Properties Listing
+		// register_sidebar( array(
+		// 	'name' => __( 'Property Listing Sidebar', 'framework' ),
+		// 	'id' => 'property-listing-sidebar',
+		// 	'description' => __( 'Widget area for property listing template sidebar.', 'framework' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+		// 	'after_widget' => '</section>',
+		// 	'before_title' => '<h3 class="title">',
+		// 	'after_title' => '</h3>'
+		// ) );
+
+		// Location: Sidebar dsIDX
+		// register_sidebar( array(
+		// 	'name' => __( 'dsIDX Sidebar', 'framework' ),
+		// 	'id' => 'dsidx-sidebar',
+		// 	'description' => __( 'Widget area for dsIDX related pages.', 'framework' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+		// 	'after_widget' => '</section>',
+		// 	'before_title' => '<h3 class="title">',
+		// 	'after_title' => '</h3>'
+		// ) );
+
+		// Location: Footer First Column
+		register_sidebar( array(
+			'name' => __( 'Footer First Column', 'framework' ),
+			'id' => 'footer-first-column',
+			'description' => __( 'Widget area for first column in footer.', 'framework' ),
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="title">',
+			'after_title' => '</h3>'
+		) );
+
+		// Location: Footer Second Column
+		register_sidebar( array(
+			'name' => __( 'Footer Second Column', 'framework' ),
+			'id' => 'footer-second-column',
+			'description' => __( 'Widget area for second column in footer.', 'framework' ),
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="title">',
+			'after_title' => '</h3>'
+		) );
+
+		// Location: Footer Third Column
+		register_sidebar( array(
+			'name' => __( 'Footer Third Column', 'framework' ),
+			'id' => 'footer-third-column',
+			'description' => __( 'Widget area for third column in footer.', 'framework' ),
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="title">',
+			'after_title' => '</h3>'
+		) );
+
+		// Location: Footer Fourth Column
+		register_sidebar( array(
+			'name' => __( 'Footer Fourth Column', 'framework' ),
+			'id' => 'footer-fourth-column',
+			'description' => __( 'Widget area for fourth column in footer.', 'framework' ),
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="title">',
+			'after_title' => '</h3>'
+		) );
+
+
+		// Location: Sidebar Agent
+		// register_sidebar( array(
+		// 	'name' => __( 'Agent Sidebar', 'framework' ),
+		// 	'id' => 'agent-sidebar',
+		// 	'description' => __( 'Sidebar widget area for agent detail page.', 'framework' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+		// 	'after_widget' => '</section>',
+		// 	'before_title' => '<h3 class="title">',
+		// 	'after_title' => '</h3>'
+		// ) );
+
+		// Location: Home Search Area
+		// register_sidebar( array(
+		// 	'name' => __( 'Home Search Area', 'framework' ),
+		// 	'id' => 'home-search-area',
+		// 	'description' => __( 'Widget area for only IDX Search Widget. Using this area means you want to display IDX search form instead of default search form.', 'framework' ),
+		// 	'before_widget' => '<section id="home-idx-search" class="clearfix %2$s">',
+		// 	'after_widget' => '</section>',
+		// 	'before_title' => '<h3 class="home-widget-label">',
+		// 	'after_title' => '</h3>'
+		// ) );
+
+		// Location: Property Search Template
+		// register_sidebar( array(
+		// 	'name' => __( 'Property Search Sidebar', 'framework' ),
+		// 	'id' => 'property-search-sidebar',
+		// 	'description' => __( 'Widget area for property search template with sidebar.', 'framework' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+		// 	'after_widget' => '</section>',
+		// 	'before_title' => '<h3 class="title">',
+		// 	'after_title' => '</h3>'
+		// ) );
+
+		// Create additional sidebar to use with visual composer if needed
+		if ( class_exists( 'Vc_Manager' ) ) {
+
+			// Additional Sidebars
+			register_sidebars( 4, array(
+				'name' => __( 'Additional Sidebar %d', 'framework' ),
+				'description' => __( 'An extra sidebar to use with Visual Composer if needed.', 'framework' ),
+				'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+				'after_widget' => '</section>',
+				'before_title' => '<h3 class="title">',
+				'after_title' => '</h3>'
+			) );
+
+		}
+
+	}
+
+	add_action( 'widgets_init', 'inspiry_theme_sidebars' );
+}
 /**
  *
  * Adding Custom post type
@@ -36,6 +225,7 @@ function create_post_type() {
 	    array(
 	        'hierarchical' => true,
 	        // 'capability_type' => 'page',
+	        'taxonomies'  => array( 'category' ),
 	        'public' => true,
 	        'rewrite' => array(
 	            'slug'       => 'south-florida-homes',

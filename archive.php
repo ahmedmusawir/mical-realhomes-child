@@ -4,7 +4,7 @@ get_header();
 
 <!-- Page Head -->
 <?php get_template_part("banners/blog_page_banner"); ?>
-<h1>Main Archive Page</h1>
+<!-- <h1>Main Archive Page</h1> -->
 <!-- Content -->
 <div class="container contents blog-page">
     <div class="row">

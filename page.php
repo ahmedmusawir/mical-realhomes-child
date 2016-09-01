@@ -1,25 +1,13 @@
 <?php
-/**
- * The template for displaying all single posts.
- * Template Name: FL City Template
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Moose_Framework
- */
-
-get_header(); ?>
-<?php
 get_header();
 ?>
 
     <!-- Page Head -->
     <?php get_template_part("banners/default_page_banner"); ?>
-<!-- <h1>FL HOme Child ( Community Single Page w sidebar)</h1> -->
+
     <!-- Content -->
     <div class="container contents single">
         <div class="row">
-            <?php get_sidebar('homes'); ?>
-        
             <div class="span9 main-wrap">
                 <!-- Main Content -->
                 <div class="main">
@@ -48,11 +36,7 @@ get_header();
                                             the_post_thumbnail('post-featured-image');
                                             echo '</a>';
                                         }
-                                        ?>
-                                            <hr/>
 
-                                        <?php
-                                            
                                         the_content();
 
                                         // WordPress Link Pages
@@ -70,11 +54,10 @@ get_header();
 
             </div> <!-- End span9 -->
 
+            <?php get_sidebar(); ?>
 
         </div><!-- End contents row -->
 
     </div><!-- End Content -->
 
 <?php get_footer(); ?>
-<?php
-get_footer();

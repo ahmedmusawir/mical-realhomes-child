@@ -12,6 +12,8 @@ get_header();
     <!-- Content -->
     <div class="container contents single">
         <div class="row">
+            <?php //get_sidebar('pages'); ?>
+
             <div class="span12 main-wrap">
                 <!-- Main Content -->
                 <div class="main">
@@ -52,6 +54,22 @@ get_header();
                                     <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
                                     <div class="row-fluid main-loop">
 
+
+                                    <?php //echo the_ID(); ?>
+                                    <?php 
+
+                                      $condo_post_link_1 = get_field('condo_post_link_1');
+                                      // echo $condo_post_link_1;
+
+                                      $condo_post_link_2 = get_field('condo_post_link_2');
+                                      // echo $condo_post_link_2;
+
+                                      $condo_post_link_3 = get_field('condo_post_link_3');
+                                      // echo $condo_post_link_3;  
+
+
+                                    ?>
+
                                         <div class="span5">
                                                 
                                             <?php if ( has_post_thumbnail() ) : ?> 
@@ -76,28 +94,27 @@ get_header();
                                             <?php the_excerpt(); ?>     
                                             <a class="btn btn-danger pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
                                             
-                                           <!--  <div class="link-block row-fluid text-center">
+                                            <div class="link-block row-fluid text-center">
 
                                                 <article class="span4">     
-                                                    <a class="btn" href="/condo-city-2/">
+                                                    <a class="btn" href="<?php echo $condo_post_link_1; ?>">
                                                         Lauderdale By The Sea Condos
                                                     </a>
                                                 </article>
 
                                                 <article class="span4">
-                                                    <a class="btn" href="/condo-city-3/">
+                                                    <a class="btn" href="<?php echo $condo_post_link_2; ?>">
                                                         Bay Harbor Islands Condos
                                                     </a>
 
                                                 </article>
                                                 <article class="span4">
-                                                    <a class="btn" href="/condo-city-1/">
+                                                    <a class="btn" href="<?php echo $condo_post_link_3; ?>">
                                                         North Miami Beach Condos
                                                     </a>
                                                 </article>
 
-                                            </div>  -->
-                                            <!-- LINK BLOCK -->
+                                            </div> <!-- LINK BLOCK -->
 
 
 
