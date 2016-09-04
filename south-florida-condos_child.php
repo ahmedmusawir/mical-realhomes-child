@@ -18,6 +18,8 @@ get_header();
     <!-- Content -->
     <div class="container contents single">
         <div class="row">
+            <?php get_sidebar('condominium'); ?>
+
             <div class="span9 main-wrap">
                 <!-- Main Content -->
                 <div class="main">
@@ -68,7 +70,6 @@ get_header();
 
             </div> <!-- End span9 -->
 
-            <?php get_sidebar('pages'); ?>
 
         </div><!-- End contents row -->
 

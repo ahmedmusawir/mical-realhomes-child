@@ -111,6 +111,26 @@ a img.aligncenter {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
+html {
+  height: 100%; }
+
+body {
+  position: relative;
+  z-index: 1;
+  height: 100%; }
+
+#footer-wrapper-condos {
+  position: relative; }
+  #footer-wrapper-condos #footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 0;
+    z-index: -999; }
+
+#sf-condo-parent .inner-wrapper {
+  padding: 16px 10px 25px;
+  margin-bottom: 380px; }
+
 .main .page-title {
   font-variant: small-caps;
   color: gray; }
@@ -121,8 +141,6 @@ a img.aligncenter {
   display: block;
   clear: both;
   width: 100%; }
-.main .btn-info {
-  padding-bottom: 1rem; }
 .main .main-loop {
   padding-top: 3rem; }
   .main .main-loop .featured-img img:hover {
@@ -131,6 +149,8 @@ a img.aligncenter {
     min-height: 60px; }
   .main .main-loop .link-block {
     padding-top: 4rem; }
+    .main .main-loop .link-block a {
+      text-decoration: underline; }
   .main .main-loop .post-title {
     font-variant: small-caps;
     color: gray !important; }

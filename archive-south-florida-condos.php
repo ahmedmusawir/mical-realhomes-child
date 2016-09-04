@@ -92,24 +92,24 @@ get_header();
                                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                             <hr>                              
                                             <?php the_excerpt(); ?>     
-                                            <a class="btn btn-danger pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
+                                            <a class="btn btn-info pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
                                             
                                             <div class="link-block row-fluid text-center">
 
                                                 <article class="span4">     
-                                                    <a class="btn" href="<?php echo $condo_post_link_1; ?>">
+                                                    <a class="" href="<?php echo $condo_post_link_1; ?>">
                                                         Lauderdale By The Sea Condos
                                                     </a>
                                                 </article>
 
                                                 <article class="span4">
-                                                    <a class="btn" href="<?php echo $condo_post_link_2; ?>">
+                                                    <a class="" href="<?php echo $condo_post_link_2; ?>">
                                                         Bay Harbor Islands Condos
                                                     </a>
 
                                                 </article>
                                                 <article class="span4">
-                                                    <a class="btn" href="<?php echo $condo_post_link_3; ?>">
+                                                    <a class="" href="<?php echo $condo_post_link_3; ?>">
                                                         North Miami Beach Condos
                                                     </a>
                                                 </article>
@@ -136,36 +136,7 @@ get_header();
 
                     </article>
 
-                    <!--====================================================
-                    =            This is the theme default loop            =
-                    =====================================================-->
-                    
-                        <?php
-                        if ( have_posts() ) :
-                            while ( have_posts() ) :
-                                the_post();
-                                ?>
-                                <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
-                                        <?php
-                                        $title_display = get_post_meta( $post->ID, 'REAL_HOMES_page_title_display', true );
-                                        if( $title_display != 'hide' ){
-                                            ?>
-                                            <h3 class="post-title"><?php //the_title(); ?></h3>
-                                            <hr/>
-                                            <?php
-                                        }
 
-                                        //the_content();
-
-                                        // WordPress Link Pages
-                                        wp_link_pages(array('before' => '<div class="pages-nav clearfix">', 'after' => '</div>', 'next_or_number' => 'next'));
-                                        ?>
-                                </article>
-                                <?php
-                            endwhile;
-                            comments_template();
-                        endif;
-                        ?>
                     </div>
 
                 </div><!-- End Main Content -->

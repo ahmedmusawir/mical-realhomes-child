@@ -9,6 +9,7 @@ $roy-green: #4cd697;
 html { 
  
 	// display: none;
+	height: 100%;
 
 }
 
@@ -16,7 +17,35 @@ body {
 
 	// display: none;
 	// color: red;
+	position: relative;
+	z-index: 1;
+	height: 100%;
+
 }
+
+#footer-wrapper-condos {
+
+	position: relative;
+
+	#footer {
+		position: fixed;
+		bottom: 0;
+		// left: 100px;
+		padding-bottom: 0;
+		z-index: -999;		
+	// border: 2px solid red;
+	// min-height: 500px;
+	}
+}
+#sf-condo-parent {
+	.inner-wrapper {
+		padding: 16px 10px 25px;
+		margin-bottom: 380px;		
+	}
+}
+
+
+// ======================================================================
 
 .main {
 
@@ -42,7 +71,7 @@ body {
 	}
 
 	.btn-info {
-		padding-bottom: 1rem;
+		// padding-bottom: 1rem;
 	}
 
 	.main-loop {
@@ -67,6 +96,9 @@ body {
 			// margin-top: 3rem;
 			// border: 1px solid red;
 			padding-top: 4rem;
+			a {
+				text-decoration: underline;
+			}
 		}
 
 

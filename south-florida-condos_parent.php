@@ -8,15 +8,15 @@ get_header();
 
     <!-- Page Head -->
     <?php get_template_part("banners/default_page_banner"); ?>
-<!-- <h1>Home Parent (Home city Template)</h1> -->
+<!-- <h1>Home Parent (Condo city Template)</h1> -->
     <!-- Content -->
     <div class="container contents single">
         <div class="row">
-            <?php get_sidebar('condominium'); ?>
+            <?php //get_sidebar('condominium'); ?>
 
-            <div class="span9 main-wrap">
+            <div class="span12 main-wrap">
                 <!-- Main Content -->
-                <div class="main">
+                <div id="sf-condo-parent" class="main">
 
                     <div class="inner-wrapper">
                     <h1 class="page-title text-center"><?php wp_title(''); ?></h1>
@@ -29,6 +29,9 @@ get_header();
                             </div>
 
                         <?php endif; ?>
+
+                        <hr>
+
                     <!--====================================================
                     =            This is the theme default loop            =
                     =====================================================-->
@@ -60,7 +63,7 @@ get_header();
                         endif;
                         ?>                                            
 
-                    <hr>
+ 
                     <!--========================================
                     =            This is Moose Loop            =
                     =========================================-->
@@ -78,23 +81,35 @@ get_header();
 
                         // print_r( $the_query );
 
-                    ?>
-
-                
-                    <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
+                    ?>        
+                    
+                   <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
  
-                           <?php 
-                                // The Loop
+                   <?php 
+                        // The Loop
 
-                                if ( $the_query->have_posts() ) :
+                        if ( $the_query->have_posts() ) :
 
-                                    while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                            while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                                    <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
-                                    <div class="row-fluid main-loop">
 
-                                        <div class="span5">
-                                                
+                        <section class="">
+                    
+                            <article class="col-md-moose">
+                                    <link rel="stylesheet" type="text/css" href="/wp-content/themes/mical-realhomes-child/_masonry-css/style.css">
+                                    <link rel="stylesheet" type="text/css" href="/wp-content/themes/mical-realhomes-child/_masonry-css/media_query.css">
+
+                                <div id="masonry-grid" class="">
+
+
+                                    <div class="grid-sizer"></div>
+
+                                    <div class="grid-item">
+                                        <article class="content-block">
+                                        
+                                            <h3 class="post-title text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+                                            <!-- <img src="http://lorempixel.com/200/100/city/1" class="img-thumbnail img-responsive"> -->
                                             <?php if ( has_post_thumbnail() ) : ?> 
                                                 
                                                 <div class="featured-img">
@@ -106,43 +121,101 @@ get_header();
                                                     <a href="<?php the_permalink(); ?>" title=""><img class="img-responsive" src="/wp-content/uploads/2016/08/mical-default-img.jpg" alt=""></a>
 
                                             <?php endif; ?>
-                                        
-                                        </div>
 
-                                        <div class="span7">
+                                            <!-- <p> -->
 
-                                            <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                            <hr/>   
-                                                                       
-                                            <?php the_excerpt(); ?>     
-                                            <a class="btn btn-danger pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
-                                        </div>  
+                                                <!-- <hr/>    -->
+                                                                           
+                                                <?php the_excerpt(); ?>     
+                                                <a class="btn btn-info pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>     
+
+                                            <!-- </p> -->
+                                        </article>
+                                    </div>
+
+                       <?php 
+                            endwhile;
+
+                        endif;
+
+                        // Reset Post Data
+
+                        wp_reset_postdata();
+
+                    ?>
 
 
-                                    </div>  <!-- END ROW FLUID -->      
-                                        
-                                <?php 
-                                    endwhile;
+                                <script src="/wp-content/themes/mical-realhomes-child/_masonry-js/imagesloaded.pkgd.min.js"></script>
+                                <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
+                                <script src="/wp-content/themes/mical-realhomes-child/_masonry-js/script.js"></script>
 
-                                endif;
+                                </div>
+                                <!-- End of Masonry Grid  -->
+                            </article>
 
-                                // Reset Post Data
 
-                                wp_reset_postdata();
+                        </section>                                            
 
-                            ?>
+                    </article>                  
+   
+     
 
-                    </article>
-
- 
                     </div> <!-- END inner-wrapper -->
 
                 </div><!-- End Main Content -->
 
             </div> <!-- End span12 -->
+            <footer id="footer-wrapper-condos">
+
+                   <div id="footer" class="container">
+
+                            <div class="row text-center">
+
+                                    <div class="span3">
+                                        <?php if ( ! dynamic_sidebar( 'footer-first-column' ) ) : ?>
+                                        <?php endif; ?>
+                                    </div>
+
+                                    <div class="span3">
+                                        <?php if ( ! dynamic_sidebar( 'footer-second-column' ) ) : ?>
+                                        <?php endif; ?>
+                                    </div>
+
+                                    <div class="clearfix visible-tablet"></div>
+
+                                    <div class="span3">
+                                        <?php if ( ! dynamic_sidebar( 'footer-third-column' ) ) : ?>
+                                        <?php endif; ?>
+                                    </div>
+
+                                    <div class="span3">
+                                        <?php if ( ! dynamic_sidebar( 'footer-fourth-column' ) ) : ?>
+                                        <?php endif; ?>
+                                    </div>
+                            </div>
+                           <div class="row text-center">
+                                    <div class="span6">
+                                        <?php
+                                        $copyright_text = get_option( 'theme_copyright_text' );
+                                        echo ( $copyright_text ) ? '<p class="copyright">' . $copyright_text . '</p>' : '';
+                                        ?>
+                                    </div>
+                                    <div class="span6">
+                                        <?php
+                                        $designed_by_text = get_option( 'theme_designed_by_text' );
+                                        echo ( $designed_by_text ) ? '<p class="designed-by">' . $designed_by_text . '</p>' : '';
+                                        ?>
+                                    </div>
+                            </div>                
+
+                   </div>
+
+            </footer><!-- End Footer -->
+
 
         </div><!-- End contents row -->
 
     </div><!-- End Content -->
 
-<?php get_footer(); ?>
+            
+
