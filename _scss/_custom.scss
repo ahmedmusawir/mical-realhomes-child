@@ -18,32 +18,104 @@ body {
 	// display: none;
 	// color: red;
 	position: relative;
-	z-index: 1;
+	z-index: -100;
 	height: 100%;
 
 }
 
-#footer-wrapper-condos {
+.help-block.wpcf7-not-valid-tip {
+	color: red;
+}
 
-	position: relative;
+#text-5 {
+	.textwidget {
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
+#footer-wrapper {
+	padding-bottom: 0;
 
 	#footer {
-		position: fixed;
-		bottom: 0;
-		// left: 100px;
-		padding-bottom: 0;
-		z-index: -999;		
-	// border: 2px solid red;
-	// min-height: 500px;
-	}
-}
-#sf-condo-parent {
-	.inner-wrapper {
-		padding: 16px 10px 25px;
-		margin-bottom: 380px;		
+		.widget {
+			ul {
+				 li {
+				 	border-bottom: 1px solid gray;
+				 }
+			}
+		}
 	}
 }
 
+
+.container {
+	position: relative;
+
+
+	.main-wrap {
+	}
+
+	#sf-condo-parent {
+		
+		position: static;
+
+		.inner-wrapper {
+			padding: 16px 10px 25px;
+			margin-bottom: 0px;	
+			z-index: -1;
+
+			@media ( max-width: 979px ) {
+				margin-bottom: 0px;
+			}	
+		}
+		
+	}
+	#footer-wrapper-condos {
+
+		#footer {
+			display: none;
+			position: fixed;
+			bottom: 0;
+			padding-bottom: 0;
+			z-index: -1;		
+			.widget {
+				z-index: 0;
+
+				ul {
+					li {
+						border-bottom: 1px solid gray;
+					}
+				}
+			}
+		}
+		#footer-bottom {
+			position: fixed;
+			bottom: 0;
+			z-index: -1;
+		}
+
+	}	
+}
+
+/**
+ *
+ * SB Post Widet
+ *
+ */
+.sb-post-widget {
+	.post-title {
+		padding-left: 1rem;
+		a {
+			font-size: 1rem;
+			text-decoration: underline;
+		}
+	}
+	.post-meta {
+		display: none;
+	}
+}
 
 // ======================================================================
 
@@ -54,10 +126,19 @@ body {
 		color: gray;
 	}
 
-	.idx-wrapper {
-		.post-title {
-			display: none;
+
+
+	.inner-wrapper {
+
+
+		.idx-wrapper {
+			border: 1rem solid red;
+
+			.post-title {
+				display: none;
+			}
 		}
+
 	}
 
 	.page-top-img {

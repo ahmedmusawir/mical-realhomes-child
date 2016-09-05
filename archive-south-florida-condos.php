@@ -59,12 +59,15 @@ get_header();
                                     <?php 
 
                                       $condo_post_link_1 = get_field('condo_post_link_1');
+                                      $condo_post_link_1_text = get_field('condo_post_link_1_text');
                                       // echo $condo_post_link_1;
 
                                       $condo_post_link_2 = get_field('condo_post_link_2');
+                                      $condo_post_link_2_text = get_field('condo_post_link_2_text');
                                       // echo $condo_post_link_2;
 
                                       $condo_post_link_3 = get_field('condo_post_link_3');
+                                      $condo_post_link_3_text = get_field('condo_post_link_3_text');
                                       // echo $condo_post_link_3;  
 
 
@@ -98,19 +101,24 @@ get_header();
 
                                                 <article class="span4">     
                                                     <a class="" href="<?php echo $condo_post_link_1; ?>">
-                                                        Lauderdale By The Sea Condos
+                                                        <!-- Lauderdale By The Sea Condos -->
+                                                        <?php echo $condo_post_link_1_text; ?>
                                                     </a>
                                                 </article>
 
                                                 <article class="span4">
                                                     <a class="" href="<?php echo $condo_post_link_2; ?>">
-                                                        Bay Harbor Islands Condos
+                                                        <!-- Bay Harbor Islands Condos -->
+                                                        <?php echo $condo_post_link_2_text; ?>
+
                                                     </a>
 
                                                 </article>
                                                 <article class="span4">
                                                     <a class="" href="<?php echo $condo_post_link_3; ?>">
-                                                        North Miami Beach Condos
+                                                        <!-- North Miami Beach Condos -->
+                                                        <?php echo $condo_post_link_3_text; ?>
+
                                                     </a>
                                                 </article>
 

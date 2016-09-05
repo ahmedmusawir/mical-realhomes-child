@@ -30,8 +30,6 @@ get_header();
 
                         <?php endif; ?>
 
-                        <hr>
-
                     <!--====================================================
                     =            This is the theme default loop            =
                     =====================================================-->
@@ -127,7 +125,7 @@ get_header();
                                                 <!-- <hr/>    -->
                                                                            
                                                 <?php the_excerpt(); ?>     
-                                                <a class="btn btn-info pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>     
+                                                <a class="pull-right" href="<?php the_permalink(); ?>">Read More ...</a>     
 
                                             <!-- </p> -->
                                         </article>
@@ -167,7 +165,7 @@ get_header();
             </div> <!-- End span12 -->
             <footer id="footer-wrapper-condos">
 
-                   <div id="footer" class="container">
+                   <!-- <div id="footer" class="container hidden-phone hidden-tablet">
 
                             <div class="row text-center">
 
@@ -208,7 +206,23 @@ get_header();
                                     </div>
                             </div>                
 
-                   </div>
+                    </div> -->
+                    <div id="footer-bottom" class="row">
+                        <div class="span1"></div>
+                            <div class="span5">
+                                <?php
+                                $copyright_text = get_option( 'theme_copyright_text' );
+                                echo ( $copyright_text ) ? '<p class="copyright">' . $copyright_text . '</p>' : '';
+                                ?>
+                            </div>
+                            <div class="span5">
+                                <?php
+                                $designed_by_text = get_option( 'theme_designed_by_text' );
+                                echo ( $designed_by_text ) ? '<p class="designed-by">' . $designed_by_text . '</p>' : '';
+                                ?>
+                            </div>
+                        <div class="span1"></div>    
+                    </div>                                   
 
             </footer><!-- End Footer -->
 

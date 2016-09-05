@@ -12,7 +12,13 @@
   -moz-box-shadow: 9px 10px 26px 1px rgba(46, 44, 46, 0.3);
   box-shadow: 9px 10px 26px 1px rgba(46, 44, 46, 0.3); }
   .grid-item h3 {
-    padding-top: 2rem; }
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .grid-item h3 a {
+      font-size: 1.2rem !important;
+      color: gray;
+      line-height: .6rem !important; }
 
 .grid-sizer {
   width: 5%; }
@@ -24,9 +30,9 @@
 .content-block {
   padding-bottom: 2rem;
   padding-right: 1rem; }
-  .content-block .btn {
+  .content-block a {
     border-radius: 0;
-    margin-top: 1rem; }
+    margin-top: -1rem; }
   .content-block p {
     padding-left: 1rem;
     padding-bottom: 1rem;

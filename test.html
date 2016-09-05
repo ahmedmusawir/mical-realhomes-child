@@ -1,3 +1,86 @@
+<!--=================================================
+=            Sellers Form Contact Form 7            =
+==================================================-->
+
+<article class="container-fluid">
+	<div class="row-fluid">
+		<div class="span6">
+			[text* first-name]First Name [/text*]
+		</div>
+		<div class="span6">
+			[text* last-name]Last Name [/text*]
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span6">
+			[text* phone-num]Phone [/text*]
+		</div>
+		<div class="span6">
+			[email* your-email]Your Email [/email*]
+		</div>
+
+	</div>
+	<div class="row-fluid">
+		
+			[text* your-address]Stree Address [/text*]
+				
+	</div>
+	<div class="row-fluid">
+
+		<div class="span4">
+			[text* your-city]City [/text*]
+		</div>
+		<div class="span4">
+			[text* your-state]State [/text*]
+		</div>
+		<div class="span4">
+			[text* your-name]Zip / Post Code [/text*]
+		</div>
+
+	</div>
+	<div class="row-fluid">
+		<div class="span4">
+				Number or Bedrooms *
+			[select* bedrooms id:bedroom-dropdown "1" "2" "3" "4" "5" "6+"]
+		</div>
+		<div class="span4">
+				Number of Bathrooms * 
+			[select* bathroom id:bathroom-dropdown "1" "2" "3+"]
+		</div>
+		<div class="span4">
+				Square Feet 
+				[select sqare-feet id:sqare-feet-dropdown class:dropdown "1,000 - 1,500" "1,500 - 2000" "2,000 - 2500" "2500 - 3000" "3000 - 4000" "4000+"]
+		</div>
+
+	</div>
+	<div class="row-fluid">
+
+		Property Type *
+		[select* property-type id:property-type-dropdown class:dropdown "Single Family Home" "Townhouse" "Vacant Lot/Land" "Oceanfront Single Family Home" "Intracoastal Single Family Home" "Riverfront Single Family Home" "Ocean Access Canal Single Family Home" "Oceanfront Condo" "Intracoastal Condo"]
+		
+	</div>
+	<div class="row-fluid">
+	<div class="span6">
+		Approximate Property Value ($) *
+		[number* property-value id:property-value-number class:number "$"]
+	
+	</div>
+	<div class="span6">
+		When would you like to sell? *
+		[select* sell-time id:sell-time-dropdown class:dropdown "1 - 2 Months" "2 - 3 Months" "3 - 4 Months" "4 - 5 Months" "5 - 6 Months" "6 + Months"]
+	</div>
+
+	</div>
+	<div class="row-fluid">
+
+
+		[textarea your-message]Comments/additional information[/textarea]
+		[submit "Send"]
+
+	</div>
+</article>
+
+
 <!--==================================
 =            Masonry Grid            =
 ===================================-->
@@ -163,7 +246,22 @@
 	</article>
 
 </div>
+/**
+ *
+ * following is Big Blue Search BTN
+ *
+ */
 
+<div class="row-fluid text-center"><article class="span3"></article><article class="span6"><a class="btn btn-info btn-block" href="http://hertzrealtygrp.idxbroker.com/idx/search/advanced">
+CLICK HERE FOR CUSTOM SEARCH OPTIONS
+</a></article><article class="span3"></article></div>
+
+
+/**
+ *
+ * Following is 4 Search Bars (5000 below, 5000 to 8000 etc.)
+ *
+ */
 
 
 <div class="row-fluid">

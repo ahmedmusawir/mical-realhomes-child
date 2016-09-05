@@ -224,7 +224,7 @@ function create_post_type() {
 	    'south-florida-homes',
 	    array(
 	        'hierarchical' => true,
-	        // 'capability_type' => 'page',
+	        'capability_type' => 'page',
 	        'taxonomies'  => array( 'category' ),
 	        'public' => true,
 	        'rewrite' => array(
@@ -254,6 +254,7 @@ function create_post_type() {
 	    array(
 	        'hierarchical' => true,
 	        'capability_type' => 'page',
+	        'taxonomies'  => array( 'category' ),
 	        'public' => true,
 	        'rewrite' => array(
 	            'slug'       => 'south-florida-condos',

@@ -7,11 +7,13 @@
 	// margin-top: 3rem;
 	display: block !important;
 	clear: both !important;
+
 }
 
 #masonry-grid {
 	// width: 100%;
 	margin: 0 auto;
+		// z-index: 100;
 	// margin-left: 0rem;
 
 }
@@ -19,6 +21,7 @@
 .grid-item {
 	width: 25%;
 	margin-top: 1rem;
+	// background: url('/wp-content/uploads/2016/09/skulls-light.jpg') fixed;
 
 	// -webkit-box-shadow: 9px 8px 22px 3px rgba(0,0,0,0.75);
 	// -moz-box-shadow: 9px 8px 22px 3px rgba(0,0,0,0.75);
@@ -30,6 +33,15 @@
 
 	h3 {
 		padding-top: 2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		
+		a {
+			font-size: 1.2rem !important;
+			color: gray;
+			line-height: .6rem !important;
+			// border: 1px solid red;
+		}
 	}
 }
 
@@ -45,10 +57,11 @@
 .content-block {
 	padding-bottom: 2rem;
 	padding-right: 1rem;
+		// border: 1px solid red;
 
-	.btn {
+	a {
 		border-radius: 0;
-		margin-top: 1rem;
+		margin-top: -1rem;
 	}
 
 	p {
