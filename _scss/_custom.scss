@@ -23,9 +23,42 @@ body {
 
 }
 
+/**
+ *
+ * Header Breadcrumbs and Search Block
+ *
+ */
+.bread-search-block {
+
+	padding-top: 3rem;
+
+	#searchsubmit {
+		// border: 1rem solid yellow;
+		margin-bottom: .7rem;
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+		background-color: #4dc7ec;
+		border: 0px solid red;
+		color: white;
+	}
+
+}
+
+/**
+ *
+ * Contact Form 7
+ *
+ */
+
 .help-block.wpcf7-not-valid-tip {
 	color: red;
 }
+
+/**
+ *
+ * Footer Address Widget
+ *
+ */
 
 #text-5 {
 	.textwidget {
@@ -34,6 +67,13 @@ body {
 		}
 	}
 }
+
+
+/**
+ *
+ * Common Footer
+ *
+ */
 
 #footer-wrapper {
 	padding-bottom: 0;
@@ -48,6 +88,12 @@ body {
 		}
 	}
 }
+
+/**
+ *
+ * Condo Paren Pg - Masonry Grid Page
+ *
+ */
 
 
 .container {
@@ -105,11 +151,22 @@ body {
  *
  */
 .sb-post-widget {
+
+	ol {
+		li {
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
+			margin: 0 !important;
+		}
+	}
 	.post-title {
 		padding-left: 1rem;
+
 		a {
-			font-size: 1rem;
-			text-decoration: underline;
+			font-size: .8rem;
+			font-weight: 100 !important;
+			text-decoration: underline;	
+			// padding-top: 0 !important;
 		}
 	}
 	.post-meta {
@@ -123,7 +180,7 @@ body {
 
 	.page-title {
 		font-variant: small-caps;
-		color: gray;
+		color: black;
 	}
 
 
@@ -151,8 +208,11 @@ body {
 		}
 	}
 
-	.btn-info {
-		// padding-bottom: 1rem;
+	.btn-info.btn-block {
+
+	    padding-bottom: 1.5rem;
+	    padding-left: .5rem;
+	    padding-right: .5rem;		
 	}
 
 	.main-loop {

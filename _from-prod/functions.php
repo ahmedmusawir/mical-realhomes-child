@@ -82,16 +82,16 @@ if ( ! function_exists( 'inspiry_theme_sidebars' ) ) {
 			'after_title' => '</h3>'
 		) );		
 
-		//Location: Header Breadcrumbs and Search bar
-		register_sidebar( array(
-			'name' => __( 'Header Search', 'framework' ),
-			'id' => 'header-search',
-			'description' => __( 'Widget area for property detail page sidebar.', 'framework' ),
-			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
-			'after_widget' => '</section>',
-			'before_title' => '<h3 class="title">',
-			'after_title' => '</h3>'
-		) );
+		// Location: Sidebar Property
+		// register_sidebar( array(
+		// 	'name' => __( 'Property Sidebar', 'framework' ),
+		// 	'id' => 'property-sidebar',
+		// 	'description' => __( 'Widget area for property detail page sidebar.', 'framework' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+		// 	'after_widget' => '</section>',
+		// 	'before_title' => '<h3 class="title">',
+		// 	'after_title' => '</h3>'
+		// ) );
 
 		// Location: Sidebar Properties Listing
 		// register_sidebar( array(
@@ -335,15 +335,3 @@ function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-/*********************************/
-/* Change Search Button Text
-/**************************************/
- 
-// Add to your child-theme functions.php
-add_filter('get_search_form', 'my_search_form_text');
- 
-function my_search_form_text($text) {
-     $text = str_replace('value="Search"', 'value="SITE SEARCH"', $text); //set as value the text you want
-     return $text;
-}
