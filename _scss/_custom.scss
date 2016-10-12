@@ -42,6 +42,14 @@ body {
 		color: white;
 	}
 
+	@media ( max-width: 767px ) {
+		text-align: center;
+
+		.breadcrumbs {
+			padding-bottom: 3rem;
+		}
+	}
+
 }
 
 /**

@@ -136,29 +136,5 @@
         </div><!-- End Header -->
 
 
-<section class="bread-search-block container-fluid">
 
-    <article class="span8 text-center">
-
-        <div class="breadcrumbs pull-left" typeof="BreadcrumbList" vocab="http://schema.org/">
-            <?php if(function_exists('bcn_display'))
-            {
-                bcn_display();
-            }?>
-        </div>
-        
-    </article>
-    <article class="span4">
-
-      <!--   <?php if ( is_active_sidebar( 'header-search' ) ) : ?>
-            <span id="header-search-block" class="">
-                SITE SEARCH: <?php dynamic_sidebar( 'header-search' ); ?>
-            </span>
-        <?php endif; ?>     -->
-        <?php echo get_search_form(); ?>
-        
-    </article>
-
-
-</section>
 

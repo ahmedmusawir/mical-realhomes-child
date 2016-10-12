@@ -133,6 +133,11 @@ body {
     background-color: #4dc7ec;
     border: 0px solid red;
     color: white; }
+  @media (max-width: 767px) {
+    .bread-search-block {
+      text-align: center; }
+      .bread-search-block .breadcrumbs {
+        padding-bottom: 3rem; } }
 
 /**
  *

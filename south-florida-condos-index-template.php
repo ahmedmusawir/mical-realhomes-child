@@ -11,6 +11,34 @@ get_header();
 
     <!-- Content -->
     <div class="container contents single">
+
+
+
+    <!--=============================================
+    =            Moose Breadcrumbs Block            =
+    ==============================================-->
+
+    <section class="bread-search-block row-fluid">
+
+        <article class="span8 text-center">
+
+            <div class="breadcrumbs pull-left" typeof="BreadcrumbList" vocab="http://schema.org/">
+                <?php if(function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }?>
+            </div>
+            
+        </article>
+        <article class="span4">
+
+            <?php echo get_search_form(); ?>
+            
+        </article>
+
+
+    </section>    
+        
         <div class="row">
             <div class="span12 main-wrap">
                 <!-- Main Content -->
