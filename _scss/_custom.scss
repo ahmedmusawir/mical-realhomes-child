@@ -1,5 +1,7 @@
 $leisa-green: #018442;
 $roy-green: #4cd697;
+$mical-blue: #144691;
+$mical-light-blue: #37b3d9;
 
 @import "bourbon/bourbon";
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
@@ -20,36 +22,86 @@ body {
 	position: relative;
 	z-index: -100;
 	height: 100%;
+	color: black;
 
 }
 
 /**
  *
- * Header Breadcrumbs and Search Block
+ * Header Mobile Version Phone Number
+ *
+ */
+a.mobile-version {
+	color: $mical-blue;
+}
+.contact-number {
+	i {
+		color: $mical-blue;
+	}
+}
+.desktop-version {
+	color: lighten( $mical-light-blue, 15% ) !important;
+}
+
+/**
+ *
+ * Top Search Block Styles
  *
  */
 .bread-search-block {
 
-	padding-top: 3rem;
+	// #searchform {
 
-	#searchsubmit {
-		// border: 1rem solid yellow;
-		margin-bottom: .7rem;
-		padding-top: .5rem;
-		padding-bottom: .5rem;
-		background-color: #4dc7ec;
-		border: 0px solid red;
-		color: white;
-	}
+	// 	#searchsubmit {
+	// 		border: 1px solid blue;
+	// 		background-color: $mical-blue;
+	// 		color: white;
+	// 		margin-bottom: .7rem;
+	// 		padding-top: .35rem;
+	// 		padding-bottom: .39rem;
+	// 	}
+	// }
 
-	@media ( max-width: 767px ) {
-		text-align: center;
+	.aps-search-form {
 
-		.breadcrumbs {
-			padding-bottom: 3rem;
+		.search-submit {
+			border: 1px solid $mical-blue;
+			background: $mical-blue;
+			color: white;
+			margin-bottom: .6rem;
+			padding-top: .7rem;
+			padding-bottom: .7rem;
+		}
+		#type-post-name {
+			border: 1px solid lightgray;
+		}
+
+		@media ( min-width: 768px ) {
+			background: white !important;
+		    border: 0px solid #eee !important;
+		    margin: 0px 0 !important;
+		    padding: 0px 0px !important;
+		    text-align: left !important;
+		}
+	    
+	}	
+}
+
+/**
+ *
+ * Widget Styles
+ *
+ */
+.widget {
+	background-color: white !important;
+
+	ul {
+		li {
+			a {
+				color: $mical-blue;
+			}
 		}
 	}
-
 }
 
 /**
@@ -182,13 +234,29 @@ body {
 	}
 }
 
+/**
+ *
+ * Single Article Style
+ *
+ */
+.single article p {
+	color: black !important;
+}
+
+/**
+ *
+ * Main Body Styles
+ *
+ */
+
+
 // ======================================================================
 
 .main {
 
 	.page-title {
 		font-variant: small-caps;
-		color: black;
+		color: gray;
 	}
 
 
@@ -197,7 +265,7 @@ body {
 
 
 		.idx-wrapper {
-			border: 1rem solid red;
+			// border: 1rem solid white !important;
 
 			.post-title {
 				display: none;

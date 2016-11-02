@@ -1,0 +1,233 @@
+/*
+Theme Name: Hertz Realty
+Theme URI: http://www.htmlfivedev.com
+Description: Customized for Hertz Realty
+Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, post-formats, responsive-layout, theme-options, translation-ready
+Author: Ahmed Rahat Musawir (Da Moose)
+Author URI: https://www.linkedin.com/in/ahmedmusawir
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template:  realhomes
+Version: 11.6
+
+
+All css files are placed in /css/ folder.
+If you want to add your own css code, please do it in /css/custom.css
+
+*/
+/* =WordPress Core
+-------------------------------------------------------------- */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300,200,100);
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center; }
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
+
+html {
+  height: 100%; }
+
+body {
+  position: relative;
+  z-index: -100;
+  height: 100%; }
+
+/**
+ *
+ * Contact Form 7
+ *
+ */
+.help-block.wpcf7-not-valid-tip {
+  color: red; }
+
+/**
+ *
+ * Footer Address Widget
+ *
+ */
+#text-5 .textwidget p {
+  font-size: 1rem; }
+
+/**
+ *
+ * Common Footer
+ *
+ */
+#footer-wrapper {
+  padding-bottom: 0; }
+  #footer-wrapper #footer .widget ul li {
+    border-bottom: 1px solid gray; }
+
+/**
+ *
+ * Condo Paren Pg - Masonry Grid Page
+ *
+ */
+.container {
+  position: relative; }
+  .container #sf-condo-parent {
+    position: static; }
+    .container #sf-condo-parent .inner-wrapper {
+      padding: 16px 10px 25px;
+      margin-bottom: 0px;
+      z-index: -1; }
+      @media (max-width: 979px) {
+        .container #sf-condo-parent .inner-wrapper {
+          margin-bottom: 0px; } }
+  .container #footer-wrapper-condos #footer {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 0;
+    z-index: -1; }
+    .container #footer-wrapper-condos #footer .widget {
+      z-index: 0; }
+      .container #footer-wrapper-condos #footer .widget ul li {
+        border-bottom: 1px solid gray; }
+  .container #footer-wrapper-condos #footer-bottom {
+    position: fixed;
+    bottom: 0;
+    z-index: -1; }
+
+/**
+ *
+ * SB Post Widet
+ *
+ */
+.sb-post-widget ol li {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important; }
+.sb-post-widget .post-title {
+  padding-left: 1rem; }
+  .sb-post-widget .post-title a {
+    font-size: .8rem;
+    font-weight: 100 !important;
+    text-decoration: underline; }
+.sb-post-widget .post-meta {
+  display: none; }
+
+.main .page-title {
+  font-variant: small-caps;
+  color: gray; }
+.main .inner-wrapper .idx-wrapper {
+  //border: 1rem solid red; }
+  .main .inner-wrapper .idx-wrapper .post-title {
+    display: none; }
+.main .page-top-img img {
+  margin: 0 auto;
+  display: block;
+  clear: both;
+  width: 100%; }
+.main .btn-info.btn-block {
+  padding-bottom: 1.5rem;
+  padding-left: .5rem;
+  padding-right: .5rem; }
+.main .main-loop {
+  padding-top: 3rem; }
+  .main .main-loop .featured-img img:hover {
+    opacity: .5; }
+  .main .main-loop .span4 .btn {
+    min-height: 60px; }
+  .main .main-loop .link-block {
+    padding-top: 4rem; }
+    .main .main-loop .link-block a {
+      text-decoration: underline; }
+  .main .main-loop .post-title {
+    font-variant: small-caps;
+    color: gray !important; }
+
+/**
+ *
+ * Todays Date: 3 Aug 2016
+ *
+ */
+
+/*# sourceMappingURL=style.css.map */
