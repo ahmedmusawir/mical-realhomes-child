@@ -1,6 +1,108 @@
 <?php
 
 /**
+ *
+ * Load Theme Styles
+ *
+ */
+
+
+if ( ! function_exists( 'load_theme_styles' ) ) {
+	/**
+	 * Load Required CSS Styles
+	 */
+	function load_theme_styles() {
+		if ( ! is_admin() ) {
+
+			// TODO: update google fonts enqueue code
+			// enqueue required fonts
+			$protocol = is_ssl() ? 'https' : 'http';
+			wp_enqueue_style( 'theme-roboto', "$protocol://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic&subset=latin,cyrillic" );
+			wp_enqueue_style( 'theme-lato', "$protocol://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" );
+
+			// register styles
+			wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css', array(), '2.2.2', 'all' );
+			wp_register_style( 'responsive-css', get_template_directory_uri() . '/css/responsive.css', array(), '2.2.2', 'all' );
+			wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.1.0', 'all' );
+			wp_register_style( 'pretty-photo-css', get_template_directory_uri() . '/js/prettyphoto/css/prettyPhoto.css', array(), '3.1.6', 'all' );
+			wp_register_style( 'swipebox', get_template_directory_uri() . '/js/swipebox/css/swipebox.min.css', array(), '1.3.0', 'all' );
+			wp_register_style( 'select2', get_template_directory_uri() . '/js/select2/select2.css', array(), '4.0.2', 'all' );
+			wp_register_style( 'main-css', get_template_directory_uri() . '/css/main.css', array(), INSPIRY_THEME_VERSION, 'all' );
+			wp_register_style( 'rtl-main-css', get_template_directory_uri() . '/css/rtl-main.css', array(), INSPIRY_THEME_VERSION, 'all' );
+			wp_register_style( 'custom-responsive-css', get_template_directory_uri() . '/css/custom-responsive.css', array(), INSPIRY_THEME_VERSION, 'all' );
+			wp_register_style( 'rtl-custom-responsive-css', get_template_directory_uri() . '/css/rtl-custom-responsive.css', array(), INSPIRY_THEME_VERSION, 'all' );
+			wp_register_style( 'vc-css', get_template_directory_uri() . '/css/visual-composer.css', array(), INSPIRY_THEME_VERSION, 'all' );
+			wp_register_style( 'parent-default', get_stylesheet_uri(), array(), INSPIRY_THEME_VERSION, 'all' );
+			wp_register_style( 'parent-custom', get_template_directory_uri() . '/css/custom.css', array(), INSPIRY_THEME_VERSION, 'all' );
+
+			// enqueue bootstrap styles
+			wp_enqueue_style( 'bootstrap-css' );
+
+			$disable_responsive_styles = get_option( 'theme_disable_responsive' );
+			if ( $disable_responsive_styles != "true" ) {
+				// enqueue bootstrap responsive styles
+				wp_enqueue_style( 'responsive-css' );
+			}
+
+			// Font awesome css
+			wp_enqueue_style( 'font-awesome' );
+
+			// Flex Slider
+			wp_dequeue_style( 'flexslider' );       // dequeue flexslider if it registered by some plugin
+			wp_deregister_style( 'flexslider' );    // deregister flexslider if it registered by some plugin
+			wp_enqueue_style(
+				'flexslider',
+				get_template_directory_uri() . '/js/flexslider/flexslider.css',
+				array(),
+				'2.6.0',
+				'all'
+			);
+
+			// enqueue Pretty Photo styles
+			wp_enqueue_style( 'pretty-photo-css' );
+
+			// enqueue Swipe Box styles
+			wp_enqueue_style( 'swipebox' );
+
+			// enqueue select2 styles
+			wp_enqueue_style( 'select2' );
+
+			// enqueue Main styles
+			wp_enqueue_style( 'main-css' );
+
+			// if rtl is enabled
+			if ( is_rtl() ) {
+				wp_enqueue_style( 'rtl-main-css' );
+			}
+
+			if ( $disable_responsive_styles != "true" ) {
+				// enqueue custom responsive styles
+				wp_enqueue_style( 'custom-responsive-css' );
+				if ( is_rtl() ) {
+					wp_enqueue_style( 'rtl-custom-responsive-css' );
+				}
+			}
+
+			if ( class_exists( 'Vc_Manager' ) ) {  // If visual composer plugin is installed
+				wp_enqueue_style( 'vc-css' );
+			}
+
+			// default css
+			wp_enqueue_style( 'parent-default' );
+
+			// parent theme custom css
+			wp_enqueue_style( 'parent-custom' );
+
+			//Load Child Theme stylesheet
+			wp_enqueue_style( 'moose-frame-style', get_stylesheet_uri(), '', '3.0' );
+
+		}
+	}
+
+	add_action( 'wp_enqueue_scripts', 'load_theme_styles' );
+}
+
+/**
  * Proper way to enqueue scripts and styles
  */
 function moose_scripts() {
@@ -22,6 +124,17 @@ add_action( 'wp_enqueue_scripts', 'moose_scripts' );
 add_image_size( 'custom-post-index', 450, 300, true ); // Hard Crop Mode
 // add_image_size( 'homepage-thumb', 220, 180 ); // Soft Crop Mode
 // add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
+
+/**
+ * Add Menu Support and register a custom menu
+ */
+	add_theme_support( 'menus' );
+	register_nav_menus(
+		array(
+			'main-mobile-menu' => __( 'Main Mobile Menu', 'framework' )
+		)
+	);
+
 
 
 /**
@@ -277,6 +390,37 @@ function create_post_type() {
 			        // Other arguments
 			)
 	);
+
+	register_post_type(
+	    'rentals',
+	    array(
+	        'hierarchical' => true,
+	        'capability_type' => 'page',
+	        'taxonomies'  => array( 'category' ),
+	        'public' => true,
+	        'rewrite' => array(
+	            'slug'       => 'rentals',
+	            'with_front' => false,
+	        ),
+	        'supports' => array(
+	            'page-attributes', /* This will show the post parent field */
+	            'title',
+	            'editor',
+	            'thumbnail'
+	        ),
+		    'labels' => array(
+		        'name' => __( 'Rentals' ),
+		        'singular_name' => __( 'Rental' ),
+				'parent_item_colon' => '',
+		        'parent' => 'Parent'		        
+		    ),
+		    // 'public' => true,
+		    'has_archive' => true	        
+			        // Other arguments
+			)
+	);	
+
+	
 }
 
 /**
@@ -316,6 +460,29 @@ add_filter('single_template', function($template) {
   if ( $queried->post_type === 'south-florida-homes' ) { // only for this CPT
     // file name per OP requirements
     $file = 'south-florida-homes_';
+    $file .= $queried->post_parent ? 'child' : 'parent';
+
+    // using `locate_teplate` to be child theme friendly
+    return locate_template("{$file}.php") ? : $template;
+  }
+
+  return $template;
+
+});
+
+/**
+ *
+ * Filters for Rentals
+ *
+ */
+
+add_filter('single_template', function($template) {
+
+  $queried = get_queried_object();
+
+  if ( $queried->post_type === 'rentals' ) { // only for this CPT
+    // file name per OP requirements
+    $file = 'rentals_';
     $file .= $queried->post_parent ? 'child' : 'parent';
 
     // using `locate_teplate` to be child theme friendly

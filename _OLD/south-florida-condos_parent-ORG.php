@@ -12,6 +12,7 @@ get_header();
     <!-- Content -->
     <div class="container contents single">
 
+
     <!--=============================================
     =            Moose Breadcrumbs Block            =
     ==============================================-->
@@ -48,21 +49,8 @@ get_header();
                 <!-- Main Content -->
                 <div id="sf-condo-parent" class="main">
 
-
                     <div class="inner-wrapper">
                     <h1 class="page-title text-center"><?php wp_title(''); ?></h1>
-                   
- 
-                    <!--====================================================
-                    =            This is the theme default loop            =
-                    =====================================================-->
-                    
-                        <?php
-                        if ( have_posts() ) :
-                            while ( have_posts() ) :
-                                the_post();
-                        ?>
-
                    
                         <?php if ( has_post_thumbnail() ) : ?> 
                             
@@ -73,6 +61,15 @@ get_header();
 
                         <?php endif; ?>
 
+                    <!--====================================================
+                    =            This is the theme default loop            =
+                    =====================================================-->
+                    
+                        <?php
+                        if ( have_posts() ) :
+                            while ( have_posts() ) :
+                                the_post();
+                                ?>
                                 <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
                                         <?php
                                         $title_display = get_post_meta( $post->ID, 'REAL_HOMES_page_title_display', true );

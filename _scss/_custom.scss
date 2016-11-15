@@ -24,7 +24,43 @@ body {
 	height: 100%;
 	color: black;
 
+	h1 {
+		color: black !important;
+	}
+
 }
+
+/**
+ *
+ * All page Header Style
+ *
+ */
+
+.header-wrapper {
+	#logo img {
+		margin-bottom: 3rem !important;
+	}
+}
+
+/**
+ *
+ * Frontpage Header Search & Main Menu Bar 
+ *
+ */
+.header-wrapper-frontpage {
+	// border: 1rem solid red;
+
+	#logo img {
+	    margin-bottom: 20px;
+	    margin-top: -4rem !important;
+		margin-bottom: 3rem !important;
+	}
+
+	#menu-main-menu {
+		// padding-top: 5rem !important;
+	}		
+} 
+
 
 /**
  *

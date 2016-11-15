@@ -27,9 +27,10 @@
 <body <?php body_class(); ?>>
 
         <!-- Start Header -->
-        <div class="header-wrapper">
+        <div class="header-wrapper-frontpage">
 
             <div class="container"><!-- Start Header Container -->
+
 
                 <header id="header" class="clearfix">
 
@@ -69,8 +70,24 @@
 
                     </div>
 
-                    <!-- Logo -->
-                    <div id="logo">
+   <!--=============================================
+    =            Moose Breadcrumbs Block            =
+    ==============================================-->
+
+    <section class="bread-search-block row-fluid">
+
+        <article class="span4 offset9">
+
+            <?php //echo get_search_form(); ?>
+
+            <?php echo do_shortcode('[autocomplete-post-search]'); ?>
+
+        </article>
+
+    </section>                                  
+
+                   <!-- Logo -->
+                    <div id="logo" class="">
 
                         <?php
                         $logo_path = get_option('theme_sitelogo');
@@ -102,7 +119,8 @@
                             echo '</span></div>';
                         }
                         ?>
-                    </div>
+                    </div>    
+  
 
 
                     <div class="menu-and-contact-wrap">
@@ -118,7 +136,7 @@
                         ?>
 
                         <!-- Start Main Menu-->
-                        <nav class="main-menu">
+                        <nav class="main-menu visible-desktop visible-tablet">
                             <?php
                             wp_nav_menu( array(
                                 'theme_location' => 'main-menu',
@@ -127,6 +145,8 @@
                             ?>
                         </nav>
                         <!-- End Main Menu -->
+
+
                     </div>
 
                 </header>

@@ -119,6 +119,26 @@ body {
   z-index: -100;
   height: 100%;
   color: black; }
+  body h1 {
+    color: black !important; }
+
+/**
+ *
+ * All page Header Style
+ *
+ */
+.header-wrapper #logo img {
+  margin-bottom: 3rem !important; }
+
+/**
+ *
+ * Frontpage Header Search & Main Menu Bar 
+ *
+ */
+.header-wrapper-frontpage #logo img {
+  margin-bottom: 20px;
+  margin-top: -4rem !important;
+  margin-bottom: 3rem !important; }
 
 /**
  *

@@ -103,7 +103,7 @@ get_header();
                     <?php 
 
                         $args = array(
-                            'post_type' => 'south-florida-condos',
+                            'post_type' => 'rentals',
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
                             'order' => 'ASC',
