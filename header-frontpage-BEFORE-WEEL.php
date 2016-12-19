@@ -29,8 +29,6 @@
         <!-- Start Header -->
         <div class="header-wrapper-frontpage">
 
-            <img id="the-weel" src="http://mical-dec.local/wp-content/uploads/2016/12/wheel-870x870-trans.png" alt="">
-
             <div class="container"><!-- Start Header Container -->
 
 
@@ -155,7 +153,7 @@
 
             </div> <!-- End Header Container -->
 
-        </div><!-- End Header Wrapper Frontpage -->
+        </div><!-- End Header -->
 
 
 
