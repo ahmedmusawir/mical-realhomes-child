@@ -10,6 +10,7 @@ $mical-light-blue: #37b3d9;
 
 html { 
 
+ 
 	/* display: none;*/
 	height: 100%;
 
@@ -505,7 +506,7 @@ a.mobile-version {
 
   			.FLEX-ITEM {
 				width: 350px;
-				height: 450px;
+				height: 330px;
 				/* border: 1px solid dodgerblue;*/
 				margin-bottom: 3rem;
 				text-align: center;
@@ -545,34 +546,18 @@ a.mobile-version {
   						padding-bottom: 0;
 					}
 				}
-
-				.search-block {
-					padding-top: 0rem;
-				}
-				.search-link-block {
-					@include display(flex);
-
-					-ms-flex-wrap: wrap;
-					    flex-wrap: wrap;
-  					@include justify-content(center);
-
-					.idx-link {
-						@include display(flex);
-  						@include flex-direction(column);
-  						padding: 1rem;
-  						padding-top: 0;
-  						padding-bottom: 0;
-					}
-				}
 				.idx-price-block {
 					@include display(flex);
 
-					-ms-flex-wrap: wrap;
-					    flex-wrap: wrap;
+					// -ms-flex-wrap: wrap;
 
-  					@include justify-content(center);
+					    // flex-wrap: wrap;
+
+					    justify-content: center;
 
 					.idx-link {
+						// width: 30px;
+  						// @include flex(1);
   						padding: 1rem;
   						padding-top: 0;
   						padding-bottom: 0;

@@ -11,48 +11,16 @@ get_header();
 <!-- <h1>Home Parent (Home city Template)</h1> -->
     <!-- Content -->
     <div class="container contents single">
-
-
-
-    <!--=============================================
-    =            Moose Breadcrumbs Block            =
-    ==============================================-->
-
-    <section class="bread-search-block row-fluid">
-
-        <article class="span8 text-center">
-
-            <div class="breadcrumbs pull-left" typeof="BreadcrumbList" vocab="http://schema.org/">
-                <?php if(function_exists('bcn_display'))
-                {
-                    bcn_display();
-                }?>
-            </div>
-            
-        </article>
-        <article class="span4">
-
-            <?php //echo get_search_form(); ?>
-
-            <?php echo do_shortcode('[autocomplete-post-search]'); ?>
-  
-            
-        </article>
-
-
-    </section>    
-
-    
         <div class="row">
+            <?php //get_sidebar('condominium'); ?>
 
-            <div class="span9 main-wrap">
+            <div class="span12 main-wrap">
                 <!-- Main Content -->
                 <div class="main">
 
                     <div class="inner-wrapper">
                     <h1 class="page-title text-center"><?php wp_title(''); ?></h1>
-
-                    
+                   
                         <?php if ( has_post_thumbnail() ) : ?> 
                             
                             <div class="page-top-img">
@@ -90,9 +58,9 @@ get_header();
                             endwhile;
                             comments_template();
                         endif;
-                        ?>       
+                        ?>                                            
 
-                        <hr>                 
+                    <hr>
                     <!--========================================
                     =            This is Moose Loop            =
                     =========================================-->
@@ -100,7 +68,7 @@ get_header();
                     <?php 
 
                         $args = array(
-                            'post_type' => 'south-florida-homes',
+                            'post_type' => 'south-florida-condos',
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
                             'order' => 'ASC',
@@ -114,8 +82,7 @@ get_header();
 
                 
                     <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
-
-
+ 
                            <?php 
                                 // The Loop
 
@@ -167,14 +134,12 @@ get_header();
 
                     </article>
 
-
+ 
                     </div> <!-- END inner-wrapper -->
 
                 </div><!-- End Main Content -->
 
-            </div> <!-- End span9 -->
-            <?php get_sidebar('homes'); ?>
-            
+            </div> <!-- End span12 -->
 
         </div><!-- End contents row -->
 

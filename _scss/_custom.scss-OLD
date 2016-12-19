@@ -1,0 +1,360 @@
+$leisa-green: #018442;
+$roy-green: #4cd697;
+$mical-blue: #144691;
+$mical-light-blue: #37b3d9;
+
+@import "bourbon/bourbon";
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300,200,100);
+
+html { 
+ 
+	// display: none;
+	height: 100%;
+
+}
+
+body {
+
+	// display: none;
+	// color: red;
+	position: relative;
+	z-index: -100;
+	height: 100%;
+	color: black;
+
+}
+
+/**
+ *
+ * Header Mobile Version Phone Number
+ *
+ */
+a.mobile-version {
+	color: $mical-blue;
+}
+.contact-number {
+	i {
+		color: $mical-blue;
+	}
+}
+.desktop-version {
+	color: lighten( $mical-light-blue, 15% ) !important;
+}
+
+/**
+ *
+ * Top Search Block Styles
+ *
+ */
+.bread-search-block {
+
+
+	.aps-search-form {
+
+		.search-submit {
+			border: 1px solid blue;
+			background: $mical-blue !important;
+			color: white;
+			margin-bottom: .7rem;
+			padding-top: .35rem;
+			padding-bottom: .39rem;
+		}
+	}
+}
+
+/**
+ *
+ * Widget Styles
+ *
+ */
+.widget {
+	background-color: white !important;
+
+	ul {
+		li {
+			a {
+				color: $mical-blue;
+			}
+		}
+	}
+}
+
+/**
+ *
+ * Contact Form 7
+ *
+ */
+
+.help-block.wpcf7-not-valid-tip {
+	color: red;
+}
+
+/**
+ *
+ * Footer Address Widget
+ *
+ */
+
+#text-5 {
+	.textwidget {
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
+
+/**
+ *
+ * Common Footer
+ *
+ */
+
+#footer-wrapper {
+	padding-bottom: 0;
+
+	#footer {
+		.widget {
+			ul {
+				 li {
+				 	border-bottom: 1px solid gray;
+				 }
+			}
+		}
+	}
+}
+
+/**
+ *
+ * Condo Paren Pg - Masonry Grid Page
+ *
+ */
+
+
+.container {
+	position: relative;
+
+
+	.main-wrap {
+	}
+
+	#sf-condo-parent {
+		
+		position: static;
+
+		.inner-wrapper {
+			padding: 16px 10px 25px;
+			margin-bottom: 0px;	
+			z-index: -1;
+
+			@media ( max-width: 979px ) {
+				margin-bottom: 0px;
+			}	
+		}
+		
+	}
+	#footer-wrapper-condos {
+
+		#footer {
+			display: none;
+			position: fixed;
+			bottom: 0;
+			padding-bottom: 0;
+			z-index: -1;		
+			.widget {
+				z-index: 0;
+
+				ul {
+					li {
+						border-bottom: 1px solid gray;
+					}
+				}
+			}
+		}
+		#footer-bottom {
+			position: fixed;
+			bottom: 0;
+			z-index: -1;
+		}
+
+	}	
+}
+
+/**
+ *
+ * SB Post Widet
+ *
+ */
+.sb-post-widget {
+
+	ol {
+		li {
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
+			margin: 0 !important;
+		}
+	}
+	.post-title {
+		padding-left: 1rem;
+
+		a {
+			font-size: .8rem;
+			font-weight: 100 !important;
+			text-decoration: underline;	
+			// padding-top: 0 !important;
+		}
+	}
+	.post-meta {
+		display: none;
+	}
+}
+
+/**
+ *
+ * Single Article Style
+ *
+ */
+.single article p {
+	color: black !important;
+}
+
+/**
+ *
+ * Main Body Styles
+ *
+ */
+
+
+// ======================================================================
+
+.main {
+
+	.page-title {
+		font-variant: small-caps;
+		color: gray;
+	}
+
+
+
+	.inner-wrapper {
+
+
+		.idx-wrapper {
+			border: 1rem solid red;
+
+			.post-title {
+				display: none;
+			}
+		}
+
+	}
+
+	.page-top-img {
+		img {
+			margin: 0 auto;
+			display: block;
+			clear: both;
+			// border: 2px solid red;
+			width: 100%;
+		}
+	}
+
+	.btn-info.btn-block {
+
+	    padding-bottom: 1.5rem;
+	    padding-left: .5rem;
+	    padding-right: .5rem;		
+	}
+
+	.main-loop {
+		// border: 1px solid red;
+		padding-top: 3rem;
+
+		.featured-img {
+			img {
+				&:hover {
+					opacity: .5;
+				}
+			}
+		}
+
+		.span4 {
+			.btn {
+				min-height: 60px;
+			}
+		}
+
+		.link-block {
+			// margin-top: 3rem;
+			// border: 1px solid red;
+			padding-top: 4rem;
+			a {
+				text-decoration: underline;
+			}
+		}
+
+
+		.post-title {
+			font-variant: small-caps;
+			color: gray !important;
+		}
+	}
+}
+
+/**
+ *
+ * RENTAL STYLES
+ *
+ */
+
+#RENTAL-MAIN {
+
+	// border: 1rem solid red;
+
+
+	#RENTAL-CONDO {
+
+		// border: 1rem solid blue;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

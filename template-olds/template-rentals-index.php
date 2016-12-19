@@ -1,6 +1,6 @@
 <?php
 /*
-*  Template Name: 
+*  Template Name: Rental Index Template
 */
 
 get_header('frontpage');
@@ -12,41 +12,17 @@ get_header('frontpage');
     <!-- Content -->
     <div class="container contents single">
 
-    <!--=============================================
-    =            Moose Breadcrumbs Block            =
-    ==============================================-->
-
-    <section class="bread-search-block row-fluid">
-
-        <article class="span8 text-center">
-
-            <div class="breadcrumbs pull-left" typeof="BreadcrumbList" vocab="http://schema.org/">
-                <?php if(function_exists('bcn_display'))
-                {
-                    //bcn_display();
-                }?>
-            </div>
-            
-        </article>
-        <article class="span4">
-
-            <?php //echo get_search_form(); ?>
-
-            <?php //echo do_shortcode('[autocomplete-post-search]'); ?>
-
-        </article>
-
-
     </section>    
 
 
-        <div class="row">
-            <div class="span12 main-wrap">
+        <div class="span12">
+            <div class="main-wrap">
                 <!-- Main Content -->
-                <div class="main">
+                <div id="RENTAL-MAIN" class="main">
 
-                    <div class="inner-wrapper">
-                    <h1 class="page-title text-center">South Florida Homes</h1>
+                    <div id="RENTAL-CONDO" class="inner-wrapper">
+
+                    <h1 class="page-title text-center">Luxury Condos For Rent</h1>
 
                     <!--========================================
                     =            This is Moose Loop            =
@@ -68,7 +44,7 @@ get_header('frontpage');
                     ?>
 
                 
-                    <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
+                    <article class="FLEX-CONTAINER" id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
 
 
                             <?php 
@@ -79,32 +55,48 @@ get_header('frontpage');
                                     while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
                                     <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
-                                    <div class="row-fluid main-loop">
+                                    <div class="row-fluid main-loop FLEX-ITEM">
 
-                                        <div class="span5">
-                                                
-                                            <?php if ( has_post_thumbnail() ) : ?> 
-                                                
-                                                <div class="featured-img">
-                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'custom-post-index', array('class' => 'img-responsive'));  ?></a>
-
-                                                </div>
-                                            <?php else : ?> 
-                                               
-                                                    <a href="<?php the_permalink(); ?>" title=""><img class="img-responsive" src="/wp-content/uploads/2016/08/mical-default-img.jpg" alt=""></a>
-
-
-                                            <?php endif; ?>
-                                        
-                                        </div>
-
-                                        <div class="span7">
+                                        <div class="">
 
                                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                            <hr/>                              
-                                            <?php the_excerpt(); ?>     
-                                            <a class="btn btn-info pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
+                                            <a class="btn" href="<?php the_permalink(); ?>" style="text-decoration: none;">
+                                                Click To See All Luxury High Rise Condos
+                                            </a>
                                         </div>  
+
+                                        <div class="idx-block idx-link-block">
+                                            
+                                            <article class="idx-link">
+                                                <a href="#" title="">BeachFront</a>
+                                            </article>
+                                            <article class="idx-link">
+                                                <a href="#" title="">Ocean Access</a>
+                                            </article>
+                                            <article class="idx-link">
+                                                <a href="#" title="">Waterfront</a>
+                                            </article>
+                                        </div>
+                                        <div class="idx-block idx-price-block">
+                                            <article class="idx-link">
+                                                <a href="#" title="">$2500-3500</a>
+                                            </article>
+                                            <article class="idx-link">
+                                                <a href="#" title="">$2500-3500</a>
+                                            </article>
+                                            <article class="idx-link">
+                                                <a href="#" title="">$2500-3500</a>
+                                            </article>
+
+                                        </div>
+                                        <div class="idx-block idx-type-block">
+                                            <article class="idx-link">
+                                                Downtown
+                                            </article>
+                                            <article class="idx-link">
+                                                Condos
+                                            </article>
+                                        </div>
 
                                     </div>  <!-- END ROW FLUID -->      
                                         

@@ -162,16 +162,7 @@ if ( ! function_exists( 'inspiry_theme_sidebars' ) ) {
 			'after_title' => '</h3>'
 		) );
 	
-		// Location: Sidebar Condos
-		// register_sidebar( array(
-		// 	'name' => __( 'Condos Sidebar', 'framework' ),
-		// 	'id' => 'condo-page-sidebar',
-		// 	'description' => __( 'Widget area for default condos template sidebar.', 'framework' ),
-		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
-		// 	'after_widget' => '</section>',
-		// 	'before_title' => '<h3 class="title">',
-		// 	'after_title' => '</h3>'
-		// ) );
+		
 
 		// Location: Sidebar for contact page
 		register_sidebar( array(
@@ -182,7 +173,10 @@ if ( ! function_exists( 'inspiry_theme_sidebars' ) ) {
 			'after_widget' => '</section>',
 			'before_title' => '<h3 class="title">',
 			'after_title' => '</h3>'
-		) );
+		) );		
+
+		
+
 
 		// Location: Default Sidebar
 		register_sidebar( array(
@@ -206,27 +200,7 @@ if ( ! function_exists( 'inspiry_theme_sidebars' ) ) {
 			'after_title' => '</h3>'
 		) );
 
-		// Location: Sidebar Properties Listing
-		// register_sidebar( array(
-		// 	'name' => __( 'Property Listing Sidebar', 'framework' ),
-		// 	'id' => 'property-listing-sidebar',
-		// 	'description' => __( 'Widget area for property listing template sidebar.', 'framework' ),
-		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
-		// 	'after_widget' => '</section>',
-		// 	'before_title' => '<h3 class="title">',
-		// 	'after_title' => '</h3>'
-		// ) );
 
-		// Location: Sidebar dsIDX
-		// register_sidebar( array(
-		// 	'name' => __( 'dsIDX Sidebar', 'framework' ),
-		// 	'id' => 'dsidx-sidebar',
-		// 	'description' => __( 'Widget area for dsIDX related pages.', 'framework' ),
-		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
-		// 	'after_widget' => '</section>',
-		// 	'before_title' => '<h3 class="title">',
-		// 	'after_title' => '</h3>'
-		// ) );
 
 		// Location: Footer First Column
 		register_sidebar( array(
@@ -273,38 +247,7 @@ if ( ! function_exists( 'inspiry_theme_sidebars' ) ) {
 		) );
 
 
-		// Location: Sidebar Agent
-		// register_sidebar( array(
-		// 	'name' => __( 'Agent Sidebar', 'framework' ),
-		// 	'id' => 'agent-sidebar',
-		// 	'description' => __( 'Sidebar widget area for agent detail page.', 'framework' ),
-		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
-		// 	'after_widget' => '</section>',
-		// 	'before_title' => '<h3 class="title">',
-		// 	'after_title' => '</h3>'
-		// ) );
-
-		// Location: Home Search Area
-		// register_sidebar( array(
-		// 	'name' => __( 'Home Search Area', 'framework' ),
-		// 	'id' => 'home-search-area',
-		// 	'description' => __( 'Widget area for only IDX Search Widget. Using this area means you want to display IDX search form instead of default search form.', 'framework' ),
-		// 	'before_widget' => '<section id="home-idx-search" class="clearfix %2$s">',
-		// 	'after_widget' => '</section>',
-		// 	'before_title' => '<h3 class="home-widget-label">',
-		// 	'after_title' => '</h3>'
-		// ) );
-
-		// Location: Property Search Template
-		// register_sidebar( array(
-		// 	'name' => __( 'Property Search Sidebar', 'framework' ),
-		// 	'id' => 'property-search-sidebar',
-		// 	'description' => __( 'Widget area for property search template with sidebar.', 'framework' ),
-		// 	'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
-		// 	'after_widget' => '</section>',
-		// 	'before_title' => '<h3 class="title">',
-		// 	'after_title' => '</h3>'
-		// ) );
+	
 
 		// Create additional sidebar to use with visual composer if needed
 		if ( class_exists( 'Vc_Manager' ) ) {
@@ -390,37 +333,6 @@ function create_post_type() {
 			        // Other arguments
 			)
 	);
-
-	register_post_type(
-	    'rentals',
-	    array(
-	        'hierarchical' => true,
-	        'capability_type' => 'page',
-	        'taxonomies'  => array( 'category' ),
-	        'public' => true,
-	        'rewrite' => array(
-	            'slug'       => 'rentals',
-	            'with_front' => false,
-	        ),
-	        'supports' => array(
-	            'page-attributes', /* This will show the post parent field */
-	            'title',
-	            'editor',
-	            'thumbnail'
-	        ),
-		    'labels' => array(
-		        'name' => __( 'Rentals' ),
-		        'singular_name' => __( 'Rental' ),
-				'parent_item_colon' => '',
-		        'parent' => 'Parent'		        
-		    ),
-		    // 'public' => true,
-		    'has_archive' => true	        
-			        // Other arguments
-			)
-	);	
-
-	
 }
 
 /**
@@ -460,29 +372,6 @@ add_filter('single_template', function($template) {
   if ( $queried->post_type === 'south-florida-homes' ) { // only for this CPT
     // file name per OP requirements
     $file = 'south-florida-homes_';
-    $file .= $queried->post_parent ? 'child' : 'parent';
-
-    // using `locate_teplate` to be child theme friendly
-    return locate_template("{$file}.php") ? : $template;
-  }
-
-  return $template;
-
-});
-
-/**
- *
- * Filters for Rentals
- *
- */
-
-add_filter('single_template', function($template) {
-
-  $queried = get_queried_object();
-
-  if ( $queried->post_type === 'rentals' ) { // only for this CPT
-    // file name per OP requirements
-    $file = 'rentals_';
     $file .= $queried->post_parent ? 'child' : 'parent';
 
     // using `locate_teplate` to be child theme friendly

@@ -112,16 +112,30 @@ a img.aligncenter {
   /* Above WP toolbar. */ }
 
 html {
+  /* display: none;*/
   height: 100%; }
 
 body {
-  position: relative;
-  z-index: -100;
-  height: 100%;
-  color: black; }
+  /* display: none;*/
+  /* color: red;*/
+  /* position: relative;*/
+  /* z-index: -100;*/
+  /* height: 100%;*/
+  /* color: black;*/ }
   body h1 {
     color: black !important; }
 
+/**
+ *
+ * Container Fix for Mobile
+ *
+ */
+@media (max-width: 439px) {
+  .container {
+    width: 100% !important; }
+    .container .breadcrumbs {
+      text-align: center !important;
+      float: none !important; } }
 /**
  *
  * All page Header Style
@@ -135,10 +149,14 @@ body {
  * Frontpage Header Search & Main Menu Bar 
  *
  */
-.header-wrapper-frontpage #logo img {
-  margin-bottom: 20px;
-  margin-top: -4rem !important;
-  margin-bottom: 3rem !important; }
+.header-wrapper-frontpage {
+  /* border: 1rem solid red;*/ }
+  .header-wrapper-frontpage #logo img {
+    margin-bottom: 20px;
+    margin-top: -4rem !important;
+    margin-bottom: 3rem !important; }
+  .header-wrapper-frontpage #menu-main-menu {
+    /* padding-top: 5rem !important;*/ }
 
 /**
  *
@@ -159,22 +177,33 @@ a.mobile-version {
  * Top Search Block Styles
  *
  */
-.bread-search-block .aps-search-form .search-submit {
-  border: 1px solid #144691;
-  background: #144691;
-  color: white;
-  margin-bottom: .6rem;
-  padding-top: .7rem;
-  padding-bottom: .7rem; }
-.bread-search-block .aps-search-form #type-post-name {
-  border: 1px solid lightgray; }
-@media (min-width: 768px) {
-  .bread-search-block .aps-search-form {
-    background: white !important;
-    border: 0px solid #eee !important;
-    margin: 0px 0 !important;
-    padding: 0px 0px !important;
-    text-align: left !important; } }
+.bread-search-block {
+  /* #searchform {*/
+  /* 	#searchsubmit {*/
+  /* 		border: 1px solid blue;*/
+  /* 		background-color: $mical-blue;*/
+  /* 		color: white;*/
+  /* 		margin-bottom: .7rem;*/
+  /* 		padding-top: .35rem;*/
+  /* 		padding-bottom: .39rem;*/
+  /* 	}*/
+  /* }*/ }
+  .bread-search-block .aps-search-form .search-submit {
+    border: 1px solid #144691;
+    background: #144691;
+    color: white;
+    margin-bottom: .6rem;
+    padding-top: .7rem;
+    padding-bottom: .7rem; }
+  .bread-search-block .aps-search-form #type-post-name {
+    border: 1px solid lightgray; }
+  @media (min-width: 768px) {
+    .bread-search-block .aps-search-form {
+      background: white !important;
+      border: 0px solid #eee !important;
+      margin: 0px 0 !important;
+      padding: 0px 0px !important;
+      text-align: left !important; } }
 
 /**
  *
@@ -257,7 +286,8 @@ a.mobile-version {
   .sb-post-widget .post-title a {
     font-size: .8rem;
     font-weight: 100 !important;
-    text-decoration: underline; }
+    text-decoration: underline;
+    /* padding-top: 0 !important;*/ }
 .sb-post-widget .post-meta {
   display: none; }
 
@@ -274,33 +304,377 @@ a.mobile-version {
  * Main Body Styles
  *
  */
+/* ======================================================================*/
 .main .page-title {
   font-variant: small-caps;
   color: gray; }
-.main .inner-wrapper .idx-wrapper .post-title {
-  display: none; }
+.main .inner-wrapper .idx-wrapper {
+  /* border: 1rem solid white !important;*/ }
+  .main .inner-wrapper .idx-wrapper .post-title {
+    display: none; }
 .main .page-top-img img {
   margin: 0 auto;
   display: block;
   clear: both;
+  /* border: 2px solid red;*/
   width: 100%; }
 .main .btn-info.btn-block {
   padding-bottom: 1.5rem;
   padding-left: .5rem;
   padding-right: .5rem; }
 .main .main-loop {
+  /* border: 1px solid red;*/
   padding-top: 3rem; }
   .main .main-loop .featured-img img:hover {
     opacity: .5; }
   .main .main-loop .span4 .btn {
     min-height: 60px; }
   .main .main-loop .link-block {
+    /* margin-top: 3rem;*/
+    /* border: 1px solid red;*/
     padding-top: 4rem; }
     .main .main-loop .link-block a {
       text-decoration: underline; }
   .main .main-loop .post-title {
     font-variant: small-caps;
     color: gray !important; }
+
+/* ================================================*/
+.parent {
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: start; }
+
+.parent > .child {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+/**
+ *
+ * RENTAL STYLES
+ *
+ */
+#RENTAL-CONDO-MAIN #RENTAL-CONDO h1 {
+  padding-bottom: 2rem;
+  padding-top: 1rem; }
+#RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  /* flex-basis: 300px;*/ }
+  #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM {
+    width: 350px;
+    height: 330px;
+    /* border: 1px solid dodgerblue;*/
+    margin-bottom: 3rem;
+    text-align: center;
+    background-color: #f0f0f0; }
+    #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM h3 {
+      text-align: center;
+      /* border: 1px solid red;*/ }
+      #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM h3 a {
+        font-size: 1.3rem; }
+    #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM .btn {
+      border-radius: 0;
+      margin-bottom: 1.5rem; }
+    #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM .idx-block {
+      padding-top: 1rem; }
+    #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM .idx-link-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM .idx-link-block .idx-link {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1; }
+    #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM .idx-price-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM .idx-price-block .idx-link {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1; }
+    #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM .idx-type-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center; }
+      #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER .FLEX-ITEM .idx-type-block .idx-link {
+        padding: 1.5rem; }
+
+#RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE h1 {
+  padding-bottom: 2rem;
+  padding-top: 1rem; }
+#RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM {
+    width: 350px;
+    height: 450px;
+    /* border: 1px solid dodgerblue;*/
+    margin-bottom: 3rem;
+    text-align: center;
+    background-color: #f0f0f0;
+    flex-grow: 1; }
+    #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM h3 {
+      text-align: center;
+      /* border: 1px solid red;*/ }
+      #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM h3 a {
+        font-size: 1.3rem; }
+    #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .btn {
+      border-radius: 0;
+      margin-bottom: 1.5rem; }
+    #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-block {
+      padding-top: 1rem; }
+    #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-link-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center; }
+      #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-link-block .idx-link {
+        padding: 1rem;
+        padding-top: 0;
+        padding-bottom: 0; }
+    #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .search-block {
+      padding-top: 0rem; }
+    #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .search-link-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; }
+      #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .search-link-block .idx-link {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-direction: column;
+        padding: 1rem;
+        padding-top: 0;
+        padding-bottom: 0; }
+    #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-price-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; }
+      #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-price-block .idx-link {
+        padding: 1rem;
+        padding-top: 0;
+        padding-bottom: 0; }
+    #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-type-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center; }
+      #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-type-block .idx-link {
+        padding: 1.5rem; }
+
+#RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST h1 {
+  padding-bottom: 2rem;
+  padding-top: 1rem; }
+#RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  /* flex-basis: 300px;*/ }
+  #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM {
+    width: 450px;
+    height: 330px;
+    /* border: 1px solid dodgerblue;*/
+    margin-bottom: 3rem;
+    text-align: center;
+    background-color: #f0f0f0; }
+    #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM h3 {
+      text-align: center;
+      /* border: 1px solid red;*/ }
+      #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM h3 a {
+        font-size: 1.3rem; }
+    #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM .btn {
+      border-radius: 0;
+      margin-bottom: 1.5rem; }
+    #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM .idx-block {
+      padding-top: 1rem; }
+    #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM .idx-link-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM .idx-link-block .idx-link {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1; }
+    #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM .idx-price-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM .idx-price-block .idx-link {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1; }
+    #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM .idx-type-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center; }
+      #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM .idx-type-block .idx-link {
+        padding: 1.5rem; }
 
 /**
  *

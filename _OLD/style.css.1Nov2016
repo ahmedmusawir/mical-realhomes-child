@@ -121,6 +121,26 @@ body {
 
 /**
  *
+ * Header Breadcrumbs and Search Block
+ *
+ */
+.bread-search-block {
+  padding-top: 3rem; }
+  .bread-search-block #searchsubmit {
+    margin-bottom: .7rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #4dc7ec;
+    border: 0px solid red;
+    color: white; }
+  @media (max-width: 767px) {
+    .bread-search-block {
+      text-align: center; }
+      .bread-search-block .breadcrumbs {
+        padding-bottom: 3rem; } }
+
+/**
+ *
  * Contact Form 7
  *
  */
@@ -196,7 +216,7 @@ body {
 
 .main .page-title {
   font-variant: small-caps;
-  color: gray; }
+  color: black; }
 .main .inner-wrapper .idx-wrapper {
   //border: 1rem solid red; }
   .main .inner-wrapper .idx-wrapper .post-title {
