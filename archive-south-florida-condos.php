@@ -2,8 +2,9 @@
 /*
 *  Template Name: Archive South Florida Condo 
 */
+get_header('frontpage');
 
-get_header();
+// get_header();
 ?>
 
     <!-- Page Head -->
@@ -24,7 +25,7 @@ get_header();
             <div class="breadcrumbs pull-left" typeof="BreadcrumbList" vocab="http://schema.org/">
                 <?php if(function_exists('bcn_display'))
                 {
-                    bcn_display();
+                    //bcn_display();
                 }?>
             </div>
             
@@ -33,7 +34,7 @@ get_header();
 
             <?php //echo get_search_form(); ?>
 
-            <?php echo do_shortcode('[autocomplete-post-search]'); ?>
+            <?php //echo do_shortcode('[autocomplete-post-search]'); ?>
             
         </article>
 
@@ -125,7 +126,7 @@ get_header();
                                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                             <hr>                              
                                             <?php the_excerpt(); ?>     
-                                            <a class="btn btn-info pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
+                                            <a class="btn btn-info pull-right" href="<?php the_permalink(); ?>" style="text-decoration: none;">SEE ALL CONDOS</a>
                                             
                                             <div class="link-block row-fluid text-center">
 

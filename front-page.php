@@ -16,26 +16,15 @@ get_header('frontpage');
     =            Moose Breadcrumbs Block            =
     ==============================================-->
 
-    <section class="bread-search-block row-fluid">
+    <section class="frontpage-top-widget row-fluid">
 
-        <article class="span8 text-center">
+        <article class="span12 text-center">
 
-            <div class="breadcrumbs pull-left" typeof="BreadcrumbList" vocab="http://schema.org/">
-                <?php if(function_exists('bcn_display'))
-                {
-                    //bcn_display();
-                }?>
-            </div>
+         <h3>Verbage Verbage Verbage Verbage Verbage Verbage Verbage Verbage </h3>
+         <h3>Verbage Verbage Verbage Verbage Verbage Verbage Verbage Verbage </h3>
+         <h3>Verbage Verbage Verbage Verbage </h3>
             
         </article>
-        <article class="span4">
-
-            <?php //echo get_search_form(); ?>
-
-            <?php //echo do_shortcode('[autocomplete-post-search]'); ?>
-
-        </article>
-
 
     </section>    
 
@@ -44,10 +33,13 @@ get_header('frontpage');
             <div class="span12 main-wrap">
                 <!-- Main Content -->
                 <div class="main">
+                    <header id="frontpg-bird">
+                        <div class="inner-wrapper">
+                        <!-- <h1 class="page-title text-center">South Florida Homes</h1> -->
+                        <img class="img-responsive hidden-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-1476x163.jpg" alt="">
+                        <img class="img-responsive visible-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-mobile-600.jpg" alt="">
 
-                    <div class="inner-wrapper">
-                    <h1 class="page-title text-center">South Florida Homes</h1>
-
+                    </header>
                     <!--========================================
                     =            This is Moose Loop            =
                     =========================================-->
@@ -100,10 +92,14 @@ get_header('frontpage');
 
                                         <div class="span7">
 
-                                            <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                            <hr/>                              
+                                            <h3 class="post-title text-center"><a href="<?php the_permalink(); ?>" style="text-decoration: none;"><?php the_title(); ?></a></h3>
+                                            <span class="btn-holder">
+                                                <img class="img-responsive" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img.jpg" alt="">
+                                            </span>
                                             <?php the_excerpt(); ?>     
-                                            <a class="btn btn-info pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
+                                            <span class="btn-holder">
+                                                <a class="btn btn-info" href="<?php the_permalink(); ?>" style="text-decoration: none;">SEE ALL HOMES</a>
+                                            </span>
                                         </div>  
 
                                     </div>  <!-- END ROW FLUID -->      

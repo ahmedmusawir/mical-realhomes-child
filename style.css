@@ -123,12 +123,50 @@ body {
 
 /**
  *
+ * Main border Removal
+ *
+ */
+.main {
+  border-left: 0px solid #dedede !important;
+  border-right: 0px solid #dedede !important; }
+  .main .main-loop {
+    text-align: center; }
+    .main .main-loop .btn-holder {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      margin-top: 2rem; }
+      .main .main-loop .btn-holder .btn {
+        border-radius: 0 !important; }
+      .main .main-loop .btn-holder img {
+        padding-bottom: 2rem; }
+
+.inner-wrapper {
+  background-color: transparent !important;
+  border-bottom: 0px solid white !important;
+  border-top: 0px solid white !important; }
+
+/**
+ *
  * Container Fix for Mobile
  *
  */
 @media (max-width: 439px) {
   .container {
-    width: 100% !important; }
+    width: 90% !important; }
     .container .breadcrumbs {
       text-align: center !important;
       float: none !important; } }
@@ -148,7 +186,10 @@ body {
 .header-wrapper-frontpage #the-weel {
   position: absolute;
   top: 10;
-  left: 0; }
+  left: 0%; }
+  @media (min-width: 1650px) {
+    .header-wrapper-frontpage #the-weel {
+      left: 10%; } }
 .header-wrapper-frontpage #logo img {
   margin-bottom: 20px;
   margin-top: -4rem !important;
@@ -169,6 +210,21 @@ a.mobile-version {
 
 .desktop-version {
   color: #77cbe5 !important; }
+  @media (min-width: 979px) {
+    .desktop-version {
+      color: white !important; } }
+
+/**
+ *
+ * Frontpage Top Widget Styles
+ *
+ */
+.frontpage-top-widget {
+  min-height: 150px;
+  text-align: center; }
+
+#frontpg-bird {
+  text-align: center; }
 
 /**
  *
@@ -202,6 +258,10 @@ a.mobile-version {
       margin: 0px 0 !important;
       padding: 0px 0px !important;
       text-align: left !important; } }
+  @media (max-width: 767px) {
+    .bread-search-block .aps-search-form {
+      background: transparent !important;
+      border: 0px solid white !important; } }
 
 /**
  *

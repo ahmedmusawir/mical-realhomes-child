@@ -32,12 +32,48 @@ body {
 
 /**
  *
+ * Main border Removal
+ *
+ */
+.main {
+    border-left: 0px solid #dedede !important;
+    border-right: 0px solid #dedede !important;
+    // background: transparent !important;
+    .main-loop {
+
+    	text-align: center;
+    	
+    	.btn-holder {
+    		 @include display(flex);
+    		 @include justify-content(center);
+    		 margin-top: 2rem;
+
+    		 .btn {
+    		 	border-radius: 0 !important;
+    		 }
+    		 img {
+    		 	padding-bottom: 2rem;
+    		 }
+    	}
+    }
+}
+.main-wrap {
+	// background: transparent;
+}
+.inner-wrapper {
+	background-color: transparent !important;
+	border-bottom: 0px solid white !important;
+	border-top: 0px solid white !important;
+}
+
+/**
+ *
  * Container Fix for Mobile
  *
  */
 @media (max-width: 439px) {
 	.container {
-	    width: 100% !important;
+	    width: 90% !important;
 
 	    .breadcrumbs {
 	    	text-align: center !important;
@@ -69,7 +105,11 @@ body {
 	#the-weel {
 		position: absolute;
 		top: 10;
-		left: 0;
+		left: 0%;
+
+		@media ( min-width: 1650px ) {
+			left: 10%;
+		}
 	}
 
 	#logo img {
@@ -99,8 +139,28 @@ a.mobile-version {
 }
 .desktop-version {
 	color: lighten( $mical-light-blue, 15% ) !important;
+
+	@media ( min-width: 979px ) {
+		color: white !important;
+	}
 }
 
+/**
+ *
+ * Frontpage Top Widget Styles
+ *
+ */
+.frontpage-top-widget {
+	min-height: 150px;
+	// border: 1px solid blue;
+	text-align: center;
+}
+
+#frontpg-bird {
+	// @include display(flex);
+	// @include flex-direction(column);
+	text-align: center;
+}
 /**
  *
  * Top Search Block Styles
@@ -140,6 +200,11 @@ a.mobile-version {
 		    margin: 0px 0 !important;
 		    padding: 0px 0px !important;
 		    text-align: left !important;
+		}
+		@media ( max-width: 767px ) {
+
+			background: transparent !important;
+			border: 0px solid white !important;
 		}
 	    
 	}	
