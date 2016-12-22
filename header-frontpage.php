@@ -29,7 +29,9 @@
         <!-- Start Header -->
         <div class="header-wrapper-frontpage">
 
+            <!-- <img id="the-weel" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/wheel-870x870-trans.png" alt=""> -->
             <img id="the-weel" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/wheel-trans-600.png" alt="">
+
 
             <div class="container"><!-- Start Header Container -->
 

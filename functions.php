@@ -245,7 +245,16 @@ if ( ! function_exists( 'inspiry_theme_sidebars' ) ) {
 			'before_title' => '<h3 class="title">',
 			'after_title' => '</h3>'
 		) );
-
+		// Location: Front Page Top Widget
+		register_sidebar( array(
+			'name' => __( 'Front Page Top Widget', 'framework' ),
+			'id' => 'frontpg-top-widget',
+			'description' => __( 'Widget area for Front Page Top Text Block.', 'framework' ),
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="title">',
+			'after_title' => '</h3>'
+		) );
 
 	
 
@@ -403,3 +412,28 @@ function my_search_form_text($text) {
      $text = str_replace('value="Search"', 'value="SITE SEARCH"', $text); //set as value the text you want
      return $text;
 }
+
+/**
+ *
+ * GETTING RENTAL CUSTOM POST CODE
+ *
+ */
+$THEME_DIR = get_stylesheet_directory();
+// echo $THEME_DIR;
+require_once $THEME_DIR . '/_moose-functions/functions-rentals.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . get_template_directory_uri() . '/_moose-functions/functions-rentals.php';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

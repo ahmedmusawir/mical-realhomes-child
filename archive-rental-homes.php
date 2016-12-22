@@ -3,7 +3,7 @@
 *  Template Name: 
 */
 
-get_header('frontpage');
+get_header();
 ?>
 
     <!-- Page Head -->
@@ -16,35 +16,39 @@ get_header('frontpage');
     =            Moose Breadcrumbs Block            =
     ==============================================-->
 
-    <section class="frontpage-top-widget row-fluid">
+     <section class="bread-search-block row-fluid">
 
-        <article class="span12 text-center">
+        <article class="span8 text-center">
 
-         <!-- <h3>Verbage Verbage Verbage Verbage Verbage Verbage Verbage Verbage </h3>
-         <h3>Verbage Verbage Verbage Verbage Verbage Verbage Verbage Verbage </h3>
-         <h3>Verbage Verbage Verbage Verbage </h3> -->
-            <!-- Moose Frontpage Top Widget -->
-            <?php
-            if ( ! dynamic_sidebar( 'frontpg-top-widget' ) ) :
-            endif;
-            ?>
-                
+            <div class="breadcrumbs pull-left" typeof="BreadcrumbList" vocab="http://schema.org/">
+                <?php if(function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }?>
+            </div>
+            
+        </article>
+        <article class="span4">
+
+            <?php //echo get_search_form(); ?>
+            
+            <?php echo do_shortcode('[autocomplete-post-search]'); ?>
+      
+            
         </article>
 
+
     </section>    
+
+    
 
 
         <div class="row">
             <div class="span12 main-wrap">
                 <!-- Main Content -->
                 <div class="main">
-                    <header id="frontpg-bird">
-                        <div class="inner-wrapper">
-                        <!-- <h1 class="page-title text-center">South Florida Homes</h1> -->
-                        <img class="img-responsive hidden-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-1476x163.jpg" alt="">
-                        <img class="img-responsive visible-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-mobile-600.jpg" alt="">
-
-                    </header>
+                    <div class="inner-wrapper">
+                        <h1 class="page-title text-center"><?php wp_title(''); ?></h1>
                     <!--========================================
                     =            This is Moose Loop            =
                     =========================================-->
@@ -52,7 +56,7 @@ get_header('frontpage');
                     <?php 
 
                         $args = array(
-                            'post_type' => 'south-florida-homes',
+                            'post_type' => 'rental-homes',
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
                             'order' => 'ASC',
@@ -120,39 +124,9 @@ get_header('frontpage');
 
                             ?>
 
-
                     </article>
 
-                    <!--====================================================
-                    =            This is the theme default loop            =
-                    =====================================================-->
-                    
-                        <?php
-                        if ( have_posts() ) :
-                            while ( have_posts() ) :
-                                the_post();
-                                ?>
-                                <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
-                                        <?php
-                                        $title_display = get_post_meta( $post->ID, 'REAL_HOMES_page_title_display', true );
-                                        if( $title_display != 'hide' ){
-                                            ?>
-                                            <h3 class="post-title"><?php //the_title(); ?></h3>
-                                            <hr/>
-                                            <?php
-                                        }
 
-                                        the_content();
-
-                                        // WordPress Link Pages
-                                        wp_link_pages(array('before' => '<div class="pages-nav clearfix">', 'after' => '</div>', 'next_or_number' => 'next'));
-                                        ?>
-                                </article>
-                                <?php
-                            endwhile;
-                            comments_template();
-                        endif;
-                        ?>
                     </div>
 
                 </div><!-- End Main Content -->

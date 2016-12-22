@@ -52,8 +52,7 @@ get_header();
                     <div class="inner-wrapper">
                     <h1 class="page-title text-center"><?php wp_title(''); ?></h1>
 
-                    
-
+                   
                     <!--====================================================
                     =            This is the theme default loop            =
                     =====================================================-->
@@ -63,7 +62,7 @@ get_header();
                             while ( have_posts() ) :
                                 the_post();
                                 ?>
-
+         
                                 <?php if ( has_post_thumbnail() ) : ?> 
                                     
                                     <div class="page-top-img">
@@ -103,7 +102,7 @@ get_header();
                     <?php 
 
                         $args = array(
-                            'post_type' => 'south-florida-homes',
+                            'post_type' => 'rental-homes',
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
                             'order' => 'ASC',
@@ -151,7 +150,7 @@ get_header();
                                             <hr/>   
                                                                        
                                             <?php the_excerpt(); ?>     
-                                            <a class="btn btn-danger pull-right" href="<?php the_permalink(); ?>">READ MORE ...</a>
+                                            <a class="btn btn-primary pull-right" href="<?php the_permalink(); ?>" style="text-decoration: none;">SEE ALL RENTAL HOMES</a>
                                         </div>  
 
 

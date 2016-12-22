@@ -112,12 +112,7 @@ a img.aligncenter {
   /* Above WP toolbar. */ }
 
 body {
-  /* display: none;*/
-  /* color: red;*/
-  position: relative;
-  /* z-index: -100;*/
-  /* height: 100%;*/
-  /* color: black;*/ }
+  position: relative; }
   body h1 {
     color: black !important; }
 
@@ -131,6 +126,9 @@ body {
   border-right: 0px solid #dedede !important; }
   .main .main-loop {
     text-align: center; }
+    @media (max-width: 767px) {
+      .main .main-loop img {
+        padding-bottom: 2.5rem; } }
     .main .main-loop .btn-holder {
       display: -webkit-box;
       display: -moz-box;
@@ -220,8 +218,15 @@ a.mobile-version {
  *
  */
 .frontpage-top-widget {
-  min-height: 150px;
   text-align: center; }
+  .frontpage-top-widget #text-5 {
+    padding-bottom: 0;
+    margin: 0;
+    border: 0px solid blue;
+    background: transparent !important; }
+    .frontpage-top-widget #text-5 h3 {
+      line-height: 2rem;
+      padding-top: 2.5rem; }
 
 #frontpg-bird {
   text-align: center; }
