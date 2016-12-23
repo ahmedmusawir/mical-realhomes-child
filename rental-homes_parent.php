@@ -1,6 +1,6 @@
 <?php
 /*
-*  Home Parent Template
+*    Template Name: Home Rental Parent Template
 */
 
 get_header();

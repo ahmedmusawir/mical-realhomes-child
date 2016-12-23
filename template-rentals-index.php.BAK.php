@@ -4,8 +4,6 @@
 */
 
 get_header('frontpage');
-
-
 ?>
 
     <!-- Page Head -->
@@ -35,7 +33,7 @@ get_header('frontpage');
                     <?php 
 
                         $args = array(
-                            'post_type' => 'rental-condos',
+                            'post_type' => 'south-florida-homes',
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
                             'order' => 'ASC',
@@ -61,37 +59,6 @@ get_header('frontpage');
                                     <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
                                     <div class="row-fluid main-loop FLEX-ITEM">
 
-                                        <?php
-
-                                            /**
-                                             *
-                                             * CONDO RENTAL IDX LINKS ACF VARS
-                                             *
-                                             */ 
-
-                                            $idx_link_text_1 = get_field('idx_link_text_1');
-                                            $idx_link_text_2 = get_field('idx_link_text_2');
-                                            $idx_link_text_3 = get_field('idx_link_text_3');
-
-                                            $idx_url_1 = get_field('idx_url_1');
-                                            $idx_url_2 = get_field('idx_url_2');
-                                            $idx_url_3 = get_field('idx_url_3');
-
-                                            /**
-                                             *
-                                             * CONDO RENTAL IDX PRICE LINKS ACF VARS
-                                             *
-                                             */
-                                            $idx_price_link_text_1 = get_field('idx_price_link_text_1');
-                                            $idx_price_link_text_2 = get_field('idx_price_link_text_2');
-                                            $idx_price_link_text_3 = get_field('idx_price_link_text_3');
-
-                                            $idx_price_url_1 = get_field('idx_price_url_1');
-                                            $idx_price_url_2 = get_field('idx_price_url_2');
-                                            $idx_price_url_3 = get_field('idx_price_url_3');     
-
-                                        ?>                                   
-
                                         <div class="">
 
                                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -103,33 +70,34 @@ get_header('frontpage');
                                         <div class="idx-block idx-link-block">
                                             
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_1; ?>" title=""><?php echo $idx_link_text_1; ?></a>
+                                                <a href="#" title="">BeachFront</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_2; ?>" title=""><?php echo $idx_link_text_2; ?></a>
+                                                <a href="#" title="">Ocean Access</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_3; ?>" title=""><?php echo $idx_link_text_3; ?></a>
+                                                <a href="#" title="">Waterfront</a>
                                             </article>
                                         </div>
                                         <div class="idx-block idx-price-block">
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_price_url_1; ?>" title=""><?php echo $idx_price_link_text_1; ?></a>
-
+                                                <a href="#" title="">$2500-3500</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_price_url_2; ?>" title=""><?php echo $idx_price_link_text_2; ?></a>
+                                                <a href="#" title="">$2500-3500</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_price_url_3; ?>" title=""><?php echo $idx_price_link_text_3; ?></a>
+                                                <a href="#" title="">$2500-3500</a>
                                             </article>
 
                                         </div>
                                         <div class="idx-block idx-type-block">
                                             <article class="idx-link">
-                                                <span class="item">Downtown</span> <span class="item">Condos</span> 
+                                                Downtown
                                             </article>
-                                           
+                                            <article class="idx-link">
+                                                Condos
+                                            </article>
                                         </div>
 
                                     </div>  <!-- END ROW FLUID -->      
@@ -182,9 +150,9 @@ get_header('frontpage');
                         $the_slug = 'east-ft-lauderdale';
 
                         $args = array(
-                            'post_type' => 'rental-homes',
+                            'post_type' => 'south-florida-homes',
                             'name' => $the_slug,
-                            'posts_per_page' => 1,
+                            'posts_per_page' => -1,
                             'post_status' => 'publish',
                             'order' => 'ASC',
                             'post_parent' => 0
@@ -277,9 +245,11 @@ get_header('frontpage');
                                         </div>
                                         <div class="idx-block idx-type-block">
                                             <article class="idx-link">
-                                                <span class="item">Downtown</span> <span class="item">Condos</span> 
+                                                Downtown
                                             </article>
-                                           
+                                            <article class="idx-link">
+                                                Condos
+                                            </article>
                                         </div>
 
                                     </div>  <!-- END ROW FLUID -->      
@@ -328,10 +298,10 @@ get_header('frontpage');
                     
                     <?php 
 
-                        $ID = 3627;
+                        $ID = 1786;
 
                         $args = array(
-                            'post_type' => 'rental-homes',
+                            'post_type' => 'south-florida-homes',
                             'post__not_in' => array($ID),
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
@@ -391,11 +361,12 @@ get_header('frontpage');
 
                                         </div>
                                         <div class="idx-block idx-type-block">
-                                            
                                             <article class="idx-link">
-                                                <span class="item">Downtown</span> <span class="item">Condos</span> 
+                                                Downtown
                                             </article>
-                                            
+                                            <article class="idx-link">
+                                                Condos
+                                            </article>
                                         </div>
 
                                     </div>  <!-- END ROW FLUID -->      

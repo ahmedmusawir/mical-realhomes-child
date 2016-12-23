@@ -555,9 +555,11 @@ a.mobile-version {
 
 
 					.idx-link {
-						// width: 30px;
-  						// @include flex(1);
-  						padding: 1.5rem;
+
+						margin-top: 2.5rem;
+  						.item {
+  							padding: 0.5rem;
+  						}								
 					}
 				}
   			}
@@ -672,9 +674,11 @@ a.mobile-version {
 
 
 					.idx-link {
-						// width: 30px;
-  						// @include flex(1);
-  						padding: 1.5rem;
+						
+						margin-top: 2.5rem;
+  						.item {
+  							padding: .5rem;
+  						}						
 					}
 				}
   			}
@@ -755,17 +759,19 @@ a.mobile-version {
 				.idx-type-block {
 					@include display(flex);
 
-					// -ms-flex-wrap: wrap;
+					-ms-flex-wrap: wrap;
 
-					    // flex-wrap: wrap;
+					    flex-wrap: wrap;
 
 					    justify-content: center;
 
 
 					.idx-link {
-						// width: 30px;
-  						// @include flex(1);
-  						padding: 1.5rem;
+						
+						margin-top: 2.5rem;
+  						.item {
+  							padding: .5rem;
+  						}
 					}
 				}
   			}
