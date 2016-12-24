@@ -560,6 +560,9 @@ a.mobile-version {
     text-align: center;
     background-color: #f0f0f0;
     flex-grow: 1; }
+    @media (max-width: 500px) {
+      #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM {
+        height: 600px; } }
     #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM h3 {
       text-align: center;
       /* border: 1px solid red;*/ }
@@ -679,8 +682,9 @@ a.mobile-version {
   justify-content: space-around;
   /* flex-basis: 300px;*/ }
   #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM {
-    width: 450px;
+    width: 490px;
     height: 330px;
+    padding: 2rem;
     /* border: 1px solid dodgerblue;*/
     margin-bottom: 3rem;
     text-align: center;

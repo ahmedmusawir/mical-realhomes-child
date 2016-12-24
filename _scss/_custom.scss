@@ -591,11 +591,16 @@ a.mobile-version {
   			.FLEX-ITEM {
 				width: 350px;
 				height: 450px;
+
 				/* border: 1px solid dodgerblue;*/
 				margin-bottom: 3rem;
 				text-align: center;
 				background-color: lighten( #e3e3e3, 5% );
 				flex-grow: 1;
+
+				@media ( max-width: 500px ) {
+					height: 600px;
+				}
 
 				h3 {
 					text-align: center;
@@ -708,8 +713,10 @@ a.mobile-version {
   			/* flex-basis: 300px;*/
 
   			.FLEX-ITEM {
-				width: 450px;
+				width: 490px;
 				height: 330px;
+				// padding-right: 1rem;
+				padding: 2rem;
 				/* border: 1px solid dodgerblue;*/
 				margin-bottom: 3rem;
 				text-align: center;
@@ -742,6 +749,7 @@ a.mobile-version {
 					.idx-link {
 						// width: 30px;
   						@include flex(1);
+  						// flex-grow: 1;
 					}
 				}
 				.idx-price-block {

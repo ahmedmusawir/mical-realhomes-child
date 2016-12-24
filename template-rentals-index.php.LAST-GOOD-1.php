@@ -1,6 +1,6 @@
 <?php
 /*
-*  Template Name: Rental Index Template
+*  Template Name: Rental Index Template LAST GOOD 1
 */
 
 get_header('frontpage');
@@ -279,45 +279,6 @@ get_header('frontpage');
                                         $neighborhood_url_15 = get_field('neighborhood_url_15');  
 
 
-                                            /**
-                                             *
-                                             * HOME RENTAL IDX LINKS ACF VARS
-                                             *
-                                             */ 
-
-                                            $idx_link_text_1 = get_field('idx_link_text_1');
-                                            $idx_link_text_2 = get_field('idx_link_text_2');
-                                            $idx_link_text_3 = get_field('idx_link_text_3');
-                                            $idx_link_text_4 = get_field('idx_link_text_4');
-
-                                            $idx_url_1 = get_field('idx_url_1');
-                                            $idx_url_2 = get_field('idx_url_2');
-                                            $idx_url_3 = get_field('idx_url_3');
-                                            $idx_url_4 = get_field('idx_url_4');
-
-                                            /**
-                                             *
-                                             * HOME RENTAL IDX PRICE LINKS ACF VARS
-                                             *
-                                             */
-
-                                            $idx_price_link_text_1 = get_field('idx_price_link_text_1');
-                                            $idx_price_link_text_2 = get_field('idx_price_link_text_2');
-                                            $idx_price_link_text_3 = get_field('idx_price_link_text_3');
-
-                                            $idx_price_url_1 = get_field('idx_price_url_1');
-                                            $idx_price_url_2 = get_field('idx_price_url_2');
-                                            $idx_price_url_3 = get_field('idx_price_url_3');   
-
-                                            /**
-                                             *
-                                             * HOME RENTAL IDX PRICE LINKS ACF VARS
-                                             *
-                                             */
-                                            $home_rental_type = get_field('home_rental_type');
-                                            $home_rental_location = get_field('home_rental_location'); 
-
-
                                     ?>
 
                                         <div class="">
@@ -362,34 +323,33 @@ get_header('frontpage');
                                         <div class="idx-block idx-link-block">
                                             
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_1; ?>" title=""><?php echo $idx_link_text_1; ?></a>
+                                                <a href="#" title="">BeachFront</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_2; ?>" title=""><?php echo $idx_link_text_2; ?></a>
+                                                <a href="#" title="">Ocean Access</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_3; ?>" title=""><?php echo $idx_link_text_3; ?></a>
+                                                <a href="#" title="">Waterfront</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_4; ?>" title=""><?php echo $idx_link_text_4; ?></a>
+                                                <a href="#" title="">Deep Water</a>
                                             </article>
                                         </div>
                                         <div class="idx-block idx-price-block">
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_price_url_1; ?>" title=""><?php echo $idx_price_link_text_1; ?></a>
+                                                <a href="#" title="">$2500-3500</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_price_url_2; ?>" title=""><?php echo $idx_price_link_text_2; ?></a>
+                                                <a href="#" title="">$2500-3500</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_price_url_3; ?>" title=""><?php echo $idx_price_link_text_3; ?></a>
+                                                <a href="#" title="">$2500-3500</a>
                                             </article>
 
                                         </div>
                                         <div class="idx-block idx-type-block">
                                             <article class="idx-link">
-                                                <span class="item"><?php echo $home_rental_type; ?></span> 
-                                                <span class="item"><?php echo $home_rental_location; ?></span> 
+                                                <span class="item">Downtown</span> <span class="item">Condos</span> 
                                             </article>
                                            
                                         </div>
@@ -470,48 +430,6 @@ get_header('frontpage');
                                     <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
                                     <div class="row-fluid main-loop FLEX-ITEM">
 
-                                        <?php 
-
-                                            /**
-                                             *
-                                             * HOME RENTAL IDX LINKS ACF VARS
-                                             *
-                                             */ 
-
-                                            $idx_link_text_1 = get_field('idx_link_text_1');
-                                            $idx_link_text_2 = get_field('idx_link_text_2');
-                                            $idx_link_text_3 = get_field('idx_link_text_3');
-                                            $idx_link_text_4 = get_field('idx_link_text_4');
-
-                                            $idx_url_1 = get_field('idx_url_1');
-                                            $idx_url_2 = get_field('idx_url_2');
-                                            $idx_url_3 = get_field('idx_url_3');
-                                            $idx_url_4 = get_field('idx_url_4');
-
-                                            /**
-                                             *
-                                             * HOME RENTAL IDX PRICE LINKS ACF VARS
-                                             *
-                                             */
-
-                                            $idx_price_link_text_1 = get_field('idx_price_link_text_1');
-                                            $idx_price_link_text_2 = get_field('idx_price_link_text_2');
-                                            $idx_price_link_text_3 = get_field('idx_price_link_text_3');
-
-                                            $idx_price_url_1 = get_field('idx_price_url_1');
-                                            $idx_price_url_2 = get_field('idx_price_url_2');
-                                            $idx_price_url_3 = get_field('idx_price_url_3');   
-
-                                            /**
-                                             *
-                                             * HOME RENTAL IDX PRICE LINKS ACF VARS
-                                             *
-                                             */
-                                            $home_rental_type = get_field('home_rental_type');
-                                            $home_rental_location = get_field('home_rental_location'); 
-
-                                        ?>                                    
-
                                         <div class="">
 
                                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -523,35 +441,34 @@ get_header('frontpage');
                                         <div class="idx-block idx-link-block">
                                             
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_1; ?>" title=""><?php echo $idx_link_text_1; ?></a>
+                                                <a href="#" title="">BeachFront</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_2; ?>" title=""><?php echo $idx_link_text_2; ?></a>
+                                                <a href="#" title="">Ocean Access</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_3; ?>" title=""><?php echo $idx_link_text_3; ?></a>
+                                                <a href="#" title="">Waterfront</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_url_4; ?>" title=""><?php echo $idx_link_text_4; ?></a>
+                                                <a href="#" title="">Waterfront</a>
                                             </article>
                                         </div>
                                         <div class="idx-block idx-price-block">
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_price_url_1; ?>" title=""><?php echo $idx_price_link_text_1; ?></a>
+                                                <a href="#" title="">$2500-3500</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_price_url_2; ?>" title=""><?php echo $idx_price_link_text_2; ?></a>
+                                                <a href="#" title="">$2500-3500</a>
                                             </article>
                                             <article class="idx-link">
-                                                <a href="<?php echo $idx_price_url_3; ?>" title=""><?php echo $idx_price_link_text_3; ?></a>
+                                                <a href="#" title="">$2500-3500</a>
                                             </article>
 
                                         </div>
                                         <div class="idx-block idx-type-block">
                                             
                                             <article class="idx-link">
-                                                <span class="item"><?php echo $home_rental_type; ?></span> 
-                                                <span class="item"><?php echo $home_rental_location; ?></span>                                                 
+                                                <span class="item">Downtown</span> <span class="item">Condos</span> 
                                             </article>
                                             
                                         </div>
