@@ -82,13 +82,22 @@ get_header('frontpage');
                                              * CONDO RENTAL IDX PRICE LINKS ACF VARS
                                              *
                                              */
+
                                             $idx_price_link_text_1 = get_field('idx_price_link_text_1');
                                             $idx_price_link_text_2 = get_field('idx_price_link_text_2');
                                             $idx_price_link_text_3 = get_field('idx_price_link_text_3');
 
                                             $idx_price_url_1 = get_field('idx_price_url_1');
                                             $idx_price_url_2 = get_field('idx_price_url_2');
-                                            $idx_price_url_3 = get_field('idx_price_url_3');     
+                                            $idx_price_url_3 = get_field('idx_price_url_3');   
+
+                                            /**
+                                             *
+                                             * CONDO RENTAL IDX PRICE LINKS ACF VARS
+                                             *
+                                             */
+                                            $condo_rental_type = get_field('condo_rental_type');
+                                            $condo_rental_location = get_field('condo_rental_location');  
 
                                         ?>                                   
 
@@ -127,7 +136,8 @@ get_header('frontpage');
                                         </div>
                                         <div class="idx-block idx-type-block">
                                             <article class="idx-link">
-                                                <span class="item">Downtown</span> <span class="item">Condos</span> 
+                                                <span class="item"><?php echo $condo_rental_type; ?></span> 
+                                                <span class="item"><?php echo $condo_rental_location; ?></span> 
                                             </article>
                                            
                                         </div>
