@@ -96,11 +96,8 @@ get_header('frontpage');
                                              * CONDO RENTAL IDX PRICE LINKS ACF VARS
                                              *
                                              */
-
                                             $condo_rental_type = get_field('condo_rental_type');
-                                            $condo_rental_type_link = get_field('condo_rental_type_link');
-                                            $condo_rental_location = get_field('condo_rental_location'); 
-                                            $condo_rental_location_link = get_field('condo_rental_location_link'); 
+                                            $condo_rental_location = get_field('condo_rental_location');  
 
                                         ?>                                   
 
@@ -123,7 +120,6 @@ get_header('frontpage');
                                             <article class="idx-link">
                                                 <a href="<?php echo $idx_url_3; ?>" title=""><?php echo $idx_link_text_3; ?></a>
                                             </article>
-
                                         </div>
                                         <div class="idx-block idx-price-block">
                                             <article class="idx-link">
@@ -140,8 +136,8 @@ get_header('frontpage');
                                         </div>
                                         <div class="idx-block idx-type-block">
                                             <article class="idx-link">
-                                                <a href="<?php echo $condo_rental_type_link; ?>" title=""><span class="item"><?php echo $condo_rental_type; ?></span></a> 
-                                                <a href="<?php echo $condo_rental_location_link; ?>" title=""><span class="item"><?php echo $condo_rental_location; ?></span></a> 
+                                                <span class="item"><?php echo $condo_rental_type; ?></span> 
+                                                <span class="item"><?php echo $condo_rental_location; ?></span> 
                                             </article>
                                            
                                         </div>
@@ -318,11 +314,8 @@ get_header('frontpage');
                                              * HOME RENTAL IDX PRICE LINKS ACF VARS
                                              *
                                              */
-
                                             $home_rental_type = get_field('home_rental_type');
-                                            $home_rental_type_link = get_field('home_rental_type_link');
                                             $home_rental_location = get_field('home_rental_location'); 
-                                            $home_rental_location_link = get_field('home_rental_location_link');
 
 
                                     ?>
@@ -395,11 +388,8 @@ get_header('frontpage');
                                         </div>
                                         <div class="idx-block idx-type-block">
                                             <article class="idx-link">
-                                                <!-- <span class="item"><?php echo $home_rental_type; ?></span>  -->
-                                                <!-- <span class="item"><?php echo $home_rental_location; ?></span>  -->
-                                                <a href="<?php echo $home_rental_type_link; ?>" title=""><span class="item"><?php echo $home_rental_type; ?></span></a> 
-                                                <a href="<?php echo $home_rental_location_link; ?>" title=""><span class="item"><?php echo $home_rental_location; ?></span></a> 
-
+                                                <span class="item"><?php echo $home_rental_type; ?></span> 
+                                                <span class="item"><?php echo $home_rental_location; ?></span> 
                                             </article>
                                            
                                         </div>
@@ -514,17 +504,13 @@ get_header('frontpage');
                                             $idx_price_url_2 = get_field('idx_price_url_2');
                                             $idx_price_url_3 = get_field('idx_price_url_3');   
 
-                                            
                                             /**
                                              *
                                              * HOME RENTAL IDX PRICE LINKS ACF VARS
                                              *
                                              */
-
                                             $home_rental_type = get_field('home_rental_type');
-                                            $home_rental_type_link = get_field('home_rental_type_link');
                                             $home_rental_location = get_field('home_rental_location'); 
-                                            $home_rental_location_link = get_field('home_rental_location_link');                                            
 
                                         ?>                                    
 
@@ -566,11 +552,8 @@ get_header('frontpage');
                                         <div class="idx-block idx-type-block">
                                             
                                             <article class="idx-link">
-                                                <!-- <span class="item"><?php echo $home_rental_type; ?></span>  -->
-                                                <!-- <span class="item"><?php echo $home_rental_location; ?></span>   -->
-                                                <a href="<?php echo $home_rental_type_link; ?>" title=""><span class="item"><?php echo $home_rental_type; ?></span></a> 
-                                                <a href="<?php echo $home_rental_location_link; ?>" title=""><span class="item"><?php echo $home_rental_location; ?></span></a> 
-
+                                                <span class="item"><?php echo $home_rental_type; ?></span> 
+                                                <span class="item"><?php echo $home_rental_location; ?></span>                                                 
                                             </article>
                                             
                                         </div>
