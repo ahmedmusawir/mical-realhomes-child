@@ -94,7 +94,7 @@ if ( ! function_exists( 'load_theme_styles' ) ) {
 			wp_enqueue_style( 'parent-custom' );
 
 			//Load Child Theme stylesheet
-			wp_enqueue_style( 'moose-frame-style', get_stylesheet_uri(), '', '7.0' );
+			wp_enqueue_style( 'moose-frame-style', get_stylesheet_uri(), '', '9.0' );
 
 		}
 	}
@@ -391,27 +391,6 @@ add_filter('single_template', function($template) {
 
 });
 
-/**
- *
- * Changing Excerpt Length
- *
- */
-function custom_excerpt_length( $length ) {
-	return 60;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-/*********************************/
-/* Change Search Button Text
-/**************************************/
- 
-// Add to your child-theme functions.php
-add_filter('get_search_form', 'my_search_form_text');
- 
-function my_search_form_text($text) {
-     $text = str_replace('value="Search"', 'value="SITE SEARCH"', $text); //set as value the text you want
-     return $text;
-}
 
 /**
  *

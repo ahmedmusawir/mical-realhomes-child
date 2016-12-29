@@ -107,6 +107,7 @@ get_header('frontpage');
                                                 </a>
                                             </h3>
                                             <span class="rope-holder">
+                                                <!-- <object id="img-<?php  echo get_the_id(); ?>" data="/wp-content/uploads/2016/12/svg-title-underline-img.svg" type="image/svg+xml"></object> -->
                                                 <img id="img-<?php  echo get_the_id(); ?>" class="img-responsive" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/NEW-underline-400.jpg" alt="">    
                                             </span>
                                             <?php the_excerpt(); ?>     
