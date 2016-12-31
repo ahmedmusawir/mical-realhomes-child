@@ -41,8 +41,8 @@ get_header('frontpage');
                     <header id="frontpg-bird">
                         <div class="inner-wrapper">
                         <!-- <h1 class="page-title text-center">South Florida Homes</h1> -->
-                        <img class="img-responsive hidden-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-SMALL.png" alt="">
-                        <img class="img-responsive visible-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-mobile.png" alt="">
+                        <img class="img-responsive hidden-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines.png" alt="">
+                        <img class="img-responsive visible-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-mobile-600.jpg" alt="">
 
                     </header>
                     <!--========================================
@@ -107,9 +107,8 @@ get_header('frontpage');
                                                 </a>
                                             </h3>
                                             <span class="rope-holder">
-                                                <!-- <img id="img-<?php  echo get_the_id(); ?>" class="img-responsive" src="/wp-content/uploads/2016/12/svg-title-underline-img.svg" alt=""  type="image/svg+xml">     -->
                                                 <!-- <object id="img-<?php  echo get_the_id(); ?>" data="/wp-content/uploads/2016/12/svg-title-underline-img.svg" type="image/svg+xml"></object> -->
-                                                <img id="img-<?php  echo get_the_id(); ?>" class="img-responsive" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/the-rope-transparent-400.png" alt="">    
+                                                <img id="img-<?php  echo get_the_id(); ?>" class="img-responsive" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/NEW-underline-400.jpg" alt="">    
                                             </span>
                                             <?php the_excerpt(); ?>     
                                             <span class="btn-holder">

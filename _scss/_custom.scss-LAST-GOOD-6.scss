@@ -8,7 +8,6 @@ $mical-mid-blue: #578fbf;
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300,200,100);
-@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
 
 html { 
 
@@ -21,16 +20,8 @@ body {
 
 	position: relative;
 
-	font-family: 'Dosis', sans-serif !important;
-
-	h1, h2, h3, h4, h5, h6 {
+	h1 {
 		color: black !important;
-		font-family: 'Dosis', sans-serif !important;
-	}
-
-	p {
-		font-size: 1.1rem !important;
-		font-weight: 300;
 	}
 
 }
@@ -57,7 +48,7 @@ body {
     	
     	.btn-holder {
     		 @include display(flex);
-    		 @include justify-content(flex-end);
+    		 @include justify-content(center);
     		 margin-top: 2rem;
 
     		 .btn {
@@ -66,11 +57,6 @@ body {
     		 img {
     		 	padding-bottom: 2rem;
     		 }
-			 @media ( max-width: 767px ) {
-			 	
-			 	@include justify-content(center);
-
-			 }    		 
     	}
     }
 }
@@ -81,65 +67,6 @@ body {
 	background-color: transparent !important;
 	border-bottom: 0px solid white !important;
 	border-top: 0px solid white !important;
-}
-
-/**
- *
- * Frontpage Article Styles
- *
- */
-.page-id-1610 {
-
-	.post-title {
-		
-		padding-bottom: 1rem;
-		padding-left: 6%;
-
-		a {
-			text-decoration: none; 
-			padding-bottom: 1.5rem;
-		}
-
-		@media ( max-width: 767px ) {
-			padding-left: 0;
-			text-align: center;
-		}
-	}	
-
-	.btn {
-	
-		border: 2px solid $mical-mid-blue;
-		background: $mical-mid-blue;
-		color: white;
-
-		&:hover {
-
-			border: 2px solid $mical-mid-blue;
-			background: transparent;
-			color: $mical-mid-blue;				
-		}
-	}
-
-	.rope-holder {
-
-		 @include display(flex);
-		 @include justify-content(flex-start);
-		 margin-top: -2.6rem;
-		 margin-bottom: -1.5rem;
-
-		 img {
-		 	padding-bottom: 2rem;
-		 }	
-		 object {
-		 	padding-bottom: 2rem;
-		 }	
-
-		 @media ( max-width: 767px ) {
-		 	
-		 	@include justify-content(center);
-
-		 }
-	}	
 }
 
 /**
@@ -200,7 +127,59 @@ body {
 } 
 
 
+/**
+ *
+ * Frontpage Article Styles
+ *
+ */
+.page-id-1610 {
 
+	.post-title {
+		font-variant: small-caps;
+		text-align: center;
+		padding-bottom: 1rem;
+		// background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img-300.png) center bottom no-repeat;
+
+		a {
+			text-decoration: none; 
+			// background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img-NO-Naughts-475.png) repeat-x 100% 100%;
+			// background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img-463.png) repeat-x 100% 100%;
+			// background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img-JUST-Naught-30.jpg) repeat-x 100% 100%;
+			// background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img-Smaller-Naughts-50.jpg) repeat-x 100% 100%;
+			// background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img-Small-170.jpg) repeat-x center bottom;
+			padding-bottom: 1.5rem;
+			// white-space: nowrap;			
+		}
+	}	
+
+	.btn {
+	
+		border: 2px solid $mical-mid-blue;
+		background: $mical-mid-blue;
+		color: white;
+
+		&:hover {
+
+			border: 2px solid $mical-mid-blue;
+			background: transparent;
+			color: $mical-mid-blue;				
+		}
+	}
+
+	.rope-holder {
+
+		 @include display(flex);
+		 @include justify-content(center);
+		 margin-top: -2.6rem;
+
+		 img {
+		 	padding-bottom: 2rem;
+		 }	
+		 object {
+		 	padding-bottom: 2rem;
+		 }	
+	}	
+}
 
 /**
  *
@@ -240,14 +219,6 @@ a.mobile-version {
 		h3 {
 			line-height: 2rem;
 			padding-top: 2.5rem;
-			padding-bottom: 2rem;
-			font-weight: 300;
-			font-size: 2rem;
-			line-height: 2.5rem;
-
-			@media ( max-width: 750px ) {
-				font-size: 1.5rem;
-			}
 		}
 	}
 }
@@ -464,6 +435,13 @@ a.mobile-version {
 
 .main {
 
+	.page-title {
+		font-variant: small-caps;
+		color: gray;
+	}
+
+
+
 	.inner-wrapper {
 
 
@@ -523,12 +501,7 @@ a.mobile-version {
 
 
 		.post-title {
-
-			a {
-				font-family: 'Dosis', sans-serif;
-				// font-variant: small-caps;
-				font-weight: 500;
-			}
+			font-variant: small-caps;
 			// text-align: center;
 			// color: gray !important;
 			// border: 1px solid red;
@@ -538,16 +511,16 @@ a.mobile-version {
 	}
 }
 /* ================================================*/
-// .parent {
-//   @include align-items(stretch);
-//   @include display(flex);
-//   @include flex-direction(row);
-//   @include justify-content(flex-start);
-// }
+.parent {
+  @include align-items(stretch);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+}
 
-// .parent > .child {
-//   @include flex(1);
-// }
+.parent > .child {
+  @include flex(1);
+}
 
 /**
  *
@@ -566,8 +539,6 @@ a.mobile-version {
 
 		a {
 			text-decoration: none !important;
-			font-size: 1rem;
-			font-weight: 500;
 
 			&:hover {
 				text-decoration: underline !important;
@@ -691,9 +662,6 @@ a.mobile-version {
 
 		a {
 			text-decoration: none !important;
-			font-size: 1rem;
-			font-weight: 500;
-
 
 			&:hover {
 				text-decoration: underline !important;
@@ -846,9 +814,6 @@ a.mobile-version {
 
 		a {
 			text-decoration: none !important;
-			font-size: 1rem;
-			font-weight: 500;
-			
 
 			&:hover {
 				text-decoration: underline !important;

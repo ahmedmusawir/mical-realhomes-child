@@ -329,7 +329,7 @@ get_header('frontpage');
 
                                         <div class="">
 
-                                            <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                            <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                             <a class="btn" href="<?php the_permalink(); ?>" style="text-decoration: none;">
                                                 Click To See All Luxury High Rise Condos
                                             </a>

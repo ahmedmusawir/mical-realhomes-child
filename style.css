@@ -20,6 +20,7 @@ If you want to add your own css code, please do it in /css/custom.css
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300,200,100);
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
 .alignnone {
   margin: 5px 20px 20px 0; }
 
@@ -112,9 +113,14 @@ a img.aligncenter {
   /* Above WP toolbar. */ }
 
 body {
-  position: relative; }
-  body h1 {
-    color: black !important; }
+  position: relative;
+  font-family: 'Dosis', sans-serif !important; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    color: black !important;
+    font-family: 'Dosis', sans-serif !important; }
+  body p {
+    font-size: 1.1rem !important;
+    font-weight: 300; }
 
 /**
  *
@@ -135,25 +141,94 @@ body {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    box-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
     margin-top: 2rem; }
     .main .main-loop .btn-holder .btn {
       border-radius: 0 !important; }
     .main .main-loop .btn-holder img {
       padding-bottom: 2rem; }
+    @media (max-width: 767px) {
+      .main .main-loop .btn-holder {
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        box-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center; } }
 
 .inner-wrapper {
   background-color: transparent !important;
   border-bottom: 0px solid white !important;
   border-top: 0px solid white !important; }
+
+/**
+ *
+ * Frontpage Article Styles
+ *
+ */
+.page-id-1610 .post-title {
+  padding-bottom: 1rem;
+  padding-left: 6%; }
+  .page-id-1610 .post-title a {
+    text-decoration: none;
+    padding-bottom: 1.5rem; }
+  @media (max-width: 767px) {
+    .page-id-1610 .post-title {
+      padding-left: 0;
+      text-align: center; } }
+.page-id-1610 .btn {
+  border: 2px solid #578fbf;
+  background: #578fbf;
+  color: white; }
+  .page-id-1610 .btn:hover {
+    border: 2px solid #578fbf;
+    background: transparent;
+    color: #578fbf; }
+.page-id-1610 .rope-holder {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  margin-top: -2.6rem;
+  margin-bottom: -1.5rem; }
+  .page-id-1610 .rope-holder img {
+    padding-bottom: 2rem; }
+  .page-id-1610 .rope-holder object {
+    padding-bottom: 2rem; }
+  @media (max-width: 767px) {
+    .page-id-1610 .rope-holder {
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; } }
 
 /**
  *
@@ -195,49 +270,6 @@ body {
 
 /**
  *
- * Frontpage Article Styles
- *
- */
-.page-id-1610 .post-title {
-  font-variant: small-caps;
-  text-align: center;
-  padding-bottom: 1rem; }
-  .page-id-1610 .post-title a {
-    text-decoration: none;
-    padding-bottom: 1.5rem; }
-.page-id-1610 .btn {
-  border: 2px solid #578fbf;
-  background: #578fbf;
-  color: white; }
-  .page-id-1610 .btn:hover {
-    border: 2px solid #578fbf;
-    background: transparent;
-    color: #578fbf; }
-.page-id-1610 .rope-holder {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  margin-top: -2.6rem; }
-  .page-id-1610 .rope-holder img {
-    padding-bottom: 2rem; }
-  .page-id-1610 .rope-holder object {
-    padding-bottom: 2rem; }
-
-/**
- *
  * Header Mobile Version Phone Number
  *
  */
@@ -268,7 +300,14 @@ a.mobile-version {
     background: transparent !important; }
     .frontpage-top-widget #text-5 h3 {
       line-height: 2rem;
-      padding-top: 2.5rem; }
+      padding-top: 2.5rem;
+      padding-bottom: 2rem;
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 2.5rem; }
+      @media (max-width: 750px) {
+        .frontpage-top-widget #text-5 h3 {
+          font-size: 1.5rem; } }
 
 #frontpg-bird {
   text-align: center;
@@ -401,9 +440,6 @@ a.mobile-version {
  *
  */
 /* ======================================================================*/
-.main .page-title {
-  font-variant: small-caps;
-  color: gray; }
 .main .inner-wrapper .idx-wrapper {
   /* border: 1rem solid white !important;*/ }
   .main .inner-wrapper .idx-wrapper .post-title {
@@ -431,56 +467,11 @@ a.mobile-version {
     padding-top: 4rem; }
     .main .main-loop .link-block a {
       text-decoration: underline; }
-  .main .main-loop .post-title {
-    font-variant: small-caps; }
+  .main .main-loop .post-title a {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500; }
 
 /* ================================================*/
-.parent {
-  -webkit-box-align: stretch;
-  -moz-box-align: stretch;
-  box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  -ms-align-items: stretch;
-  -o-align-items: stretch;
-  align-items: stretch;
-  -ms-flex-align: stretch;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  box-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  -o-justify-content: flex-start;
-  justify-content: flex-start;
-  -ms-flex-pack: start; }
-
-.parent > .child {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
-
 /**
  *
  * RENTAL STYLES
@@ -491,7 +482,9 @@ a.mobile-version {
   #RENTAL-CONDO-MAIN .FLEX-ITEM {
     background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/skulls.jpg) fixed; }
     #RENTAL-CONDO-MAIN .FLEX-ITEM a {
-      text-decoration: none !important; }
+      text-decoration: none !important;
+      font-size: 1rem;
+      font-weight: 500; }
       #RENTAL-CONDO-MAIN .FLEX-ITEM a:hover {
         text-decoration: underline !important; }
     #RENTAL-CONDO-MAIN .FLEX-ITEM .btn {
@@ -590,7 +583,9 @@ a.mobile-version {
   #RENTAL-HOME-SINGLE-MAIN .FLEX-ITEM {
     background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/skulls.jpg) fixed; }
     #RENTAL-HOME-SINGLE-MAIN .FLEX-ITEM a {
-      text-decoration: none !important; }
+      text-decoration: none !important;
+      font-size: 1rem;
+      font-weight: 500; }
       #RENTAL-HOME-SINGLE-MAIN .FLEX-ITEM a:hover {
         text-decoration: underline !important; }
     #RENTAL-HOME-SINGLE-MAIN .FLEX-ITEM .btn {
@@ -732,7 +727,9 @@ a.mobile-version {
 #RENTAL-HOME-REST-MAIN .FLEX-ITEM {
   background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/skulls.jpg) fixed; }
   #RENTAL-HOME-REST-MAIN .FLEX-ITEM a {
-    text-decoration: none !important; }
+    text-decoration: none !important;
+    font-size: 1rem;
+    font-weight: 500; }
     #RENTAL-HOME-REST-MAIN .FLEX-ITEM a:hover {
       text-decoration: underline !important; }
   #RENTAL-HOME-REST-MAIN .FLEX-ITEM .btn {
