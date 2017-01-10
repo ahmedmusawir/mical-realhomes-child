@@ -40,9 +40,11 @@ get_header('frontpage');
                 <div class="main">
                     <header id="frontpg-bird">
                         <div class="inner-wrapper">
-                        <!-- <h1 class="page-title text-center">South Florida Homes</h1> -->
-                        <img class="img-responsive hidden-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-SMALL.png" alt="">
-                        <img class="img-responsive visible-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-mobile.png" alt="">
+                            <h1 class="page-title text-center">South Florida Homes</h1>
+                            <!-- <img class="img-responsive hidden-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2017/01/frontpg-head-lines-ROPE-2.png" alt=""> -->
+                            <!-- <img class="img-responsive hidden-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-SMALL.png" alt=""> -->
+                            <!-- <img class="img-responsive visible-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2017/01/frontpg-head-lines-ROPE-2.png" alt=""> -->
+                            <!-- <img class="img-responsive visible-phone" src="http://fortlauderdale-properties.com/wp-content/uploads/2016/12/frontpg-head-lines-mobile.png" alt=""> -->
 
                     </header>
                     <!--========================================

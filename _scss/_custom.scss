@@ -4,16 +4,26 @@ $mical-blue: #144691;
 $mical-light-blue: #37b3d9;
 $mical-mid-blue: #578fbf;
 
+@font-face {font-family: "AdrianeLuxW01";
+    src: url("//db.onlinewebfonts.com/t/50f0a3a4dbb3fa28d1c9c871546cc279.eot");
+    src: url("//db.onlinewebfonts.com/t/50f0a3a4dbb3fa28d1c9c871546cc279.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/50f0a3a4dbb3fa28d1c9c871546cc279.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/50f0a3a4dbb3fa28d1c9c871546cc279.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/50f0a3a4dbb3fa28d1c9c871546cc279.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/50f0a3a4dbb3fa28d1c9c871546cc279.svg#AdrianeLuxW01") format("svg");
+}
+
 @import "bourbon/bourbon";
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300,200,100);
 @import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
+@import url(//db.onlinewebfonts.com/c/50f0a3a4dbb3fa28d1c9c871546cc279?family=AdrianeLuxW01);
 
 html { 
 
 	// display: none;
-	// height: 100%;
+	/* height: 100%;*/
 
 }
 
@@ -43,14 +53,14 @@ body {
 .main {
     border-left: 0px solid #dedede !important;
     border-right: 0px solid #dedede !important;
-    // background: transparent !important;
+    /* background: transparent !important;*/
     .main-loop {
 
-    	// text-align: center;
+    	/* text-align: center;*/
 
     	@media (max-width: 767px) {
     		img {
-    			// border: 1rem solid red;
+    			/* border: 1rem solid red;*/
     			padding-bottom: 2.5rem;
     		}
     	}
@@ -75,7 +85,7 @@ body {
     }
 }
 .main-wrap {
-	// background: transparent;
+	/* background: transparent;*/
 }
 .inner-wrapper {
 	background-color: transparent !important;
@@ -89,6 +99,23 @@ body {
  *
  */
 .page-id-1610 {
+
+	.page-title {
+		 margin-bottom: -1rem;
+		 text-align: center;
+		 font-family: "AdrianeLuxW01" !important;
+		 font-weight: 300;
+		 font-size: 2.8rem;
+		 color: #2a3593 !important;
+		 padding-bottom: 1.5rem;
+		 background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img.jpg) center bottom no-repeat;
+		
+		@media ( max-width: 600px ) {
+			font-size: 2rem;
+			padding-bottom: .8rem;
+		 	background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/NEW-underline-300.jpg) center bottom no-repeat;
+		}
+	}
 
 	.post-title {
 		
@@ -175,9 +202,9 @@ body {
  *
  */
 .header-wrapper-frontpage {
-	// border: .2rem solid red;
+	/* border: .2rem solid red;*/
 
-	// background: url(http://mical-dec.local/wp-content/uploads/2016/12/wheel.jpg) no-repeat left top;
+	/* background: url(http://mical-dec.local/wp-content/uploads/2016/12/wheel.jpg) no-repeat left top;*/
 	#the-weel {
 		position: absolute;
 		top: 10;
@@ -229,8 +256,8 @@ a.mobile-version {
  *
  */
 .frontpage-top-widget {
-	// min-height: 150px;
-	margin-top: -3rem !important;
+	/* min-height: 150px;*/
+	margin-top: -4rem !important;
 	text-align: center;
 	#text-5 {
 		padding-bottom: 0; 
@@ -241,8 +268,8 @@ a.mobile-version {
 			line-height: 2rem;
 			padding-top: 2.5rem;
 			padding-bottom: 2rem;
-			font-weight: 300;
-			font-size: 2rem;
+			font-weight: 400;
+			font-size: 1.4rem;
 			line-height: 2.5rem;
 
 			@media ( max-width: 750px ) {
@@ -253,8 +280,8 @@ a.mobile-version {
 }
 
 #frontpg-bird {
-	// @include display(flex);
-	// @include flex-direction(column);
+	/* @include display(flex);*/
+	/* @include flex-direction(column);*/
 
 	text-align: center;
 	margin-bottom: -3rem !important;
@@ -376,11 +403,12 @@ a.mobile-version {
 	#sf-condo-parent {
 		
 		position: static;
+		background: white;
 
 		.inner-wrapper {
 			padding: 16px 10px 25px;
 			margin-bottom: 0px;	
-			z-index: -1;
+			z-index: 1;
 
 			@media ( max-width: 979px ) {
 				margin-bottom: 0px;
@@ -390,26 +418,11 @@ a.mobile-version {
 	}
 	#footer-wrapper-condos {
 
-		#footer {
-			display: none;
-			position: fixed;
-			bottom: 0;
-			padding-bottom: 0;
-			z-index: -1;		
-			.widget {
-				z-index: 0;
 
-				ul {
-					li {
-						border-bottom: 1px solid gray;
-					}
-				}
-			}
-		}
 		#footer-bottom {
 			position: fixed;
 			bottom: 0;
-			z-index: -1;
+			z-index: -100;
 		}
 
 	}	
@@ -526,28 +539,28 @@ a.mobile-version {
 
 			a {
 				font-family: 'Dosis', sans-serif;
-				// font-variant: small-caps;
+				/* font-variant: small-caps;*/
 				font-weight: 500;
 			}
-			// text-align: center;
-			// color: gray !important;
-			// border: 1px solid red;
-			// padding-bottom: 1rem;
-			// background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img.jpg) center bottom no-repeat;
+			/* text-align: center;*/
+			/* color: gray !important;*/
+			/* border: 1px solid red;*/
+			/* padding-bottom: 1rem;*/
+			/* background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img.jpg) center bottom no-repeat;*/
 		}
 	}
 }
 /* ================================================*/
-// .parent {
-//   @include align-items(stretch);
-//   @include display(flex);
-//   @include flex-direction(row);
-//   @include justify-content(flex-start);
-// }
+/* .parent {*/
+/*   @include align-items(stretch);*/
+/*   @include display(flex);*/
+/*   @include flex-direction(row);*/
+/*   @include justify-content(flex-start);*/
+/* }*/
 
-// .parent > .child {
-//   @include flex(1);
-// }
+/* .parent > .child {*/
+/*   @include flex(1);*/
+/* }*/
 
 /**
  *
@@ -563,6 +576,17 @@ a.mobile-version {
 
 		background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/skulls.jpg) fixed;
 
+		.featured-img {
+  			@include display(flex);
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			
+			img {
+				width: 100%;
+				padding-bottom: 1.5rem;
+			}
+		}
 
 		a {
 			text-decoration: none !important;
@@ -606,11 +630,10 @@ a.mobile-version {
 
   			.FLEX-ITEM {
 				width: 350px;
-				height: 330px;
-				/* border: 1px solid dodgerblue;*/
+				height: 560px;
 				margin-bottom: 3rem;
 				text-align: center;
-				// background-color: lighten( #e3e3e3, 5% );
+				/* flex-grow: 1;*/
 
 
 				h3 {
@@ -638,7 +661,7 @@ a.mobile-version {
 					    flex-wrap: wrap;
 
 					.idx-link {
-						// width: 30px;
+						/* width: 30px;*/
   						@include flex(1);
 					}
 				}
@@ -650,18 +673,22 @@ a.mobile-version {
 					    flex-wrap: wrap;
 
 					.idx-link {
-						// width: 30px;
+						/* width: 30px;*/
   						@include flex(1);
 					}
 				}
 				.idx-type-block {
 					@include display(flex);
 
-					// -ms-flex-wrap: wrap;
+					/* -ms-flex-wrap: wrap;*/
 
-					    // flex-wrap: wrap;
+					    /* flex-wrap: wrap;*/
 
-					    justify-content: center;
+					    -webkit-box-pack: center;
+
+					        -ms-flex-pack: center;
+
+					            justify-content: center;
 
 
 					.idx-link {
@@ -688,6 +715,17 @@ a.mobile-version {
 
 		background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/skulls.jpg) fixed;
 
+		.featured-img {
+  			@include display(flex);
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			
+			img {
+				width: 100%;
+				padding-bottom: 1.5rem;
+			}
+		}
 
 		a {
 			text-decoration: none !important;
@@ -733,16 +771,18 @@ a.mobile-version {
 
   			.FLEX-ITEM {
 				width: 350px;
-				height: 450px;
+				height: 750px;
 
 				/* border: 1px solid dodgerblue;*/
 				margin-bottom: 3rem;
 				text-align: center;
-				// background-color: lighten( #e3e3e3, 5% );
-				flex-grow: 1;
+				/* background-color: lighten( #e3e3e3, 5% );*/
+				-webkit-box-flex: 1;
+				    -ms-flex-positive: 1;
+				        flex-grow: 1;
 
-				@media ( max-width: 500px ) {
-					height: 600px;
+				@media ( max-width: 767px ) {
+					height: 850px;
 				}
 
 				h3 {
@@ -765,14 +805,16 @@ a.mobile-version {
 				.idx-link-block {
 					@include display(flex);
 
-					// -ms-flex-wrap: wrap;
+					/* -ms-flex-wrap: wrap;*/
 
-					    // flex-wrap: wrap;
-					    justify-content: center;
+					    /* flex-wrap: wrap;*/
+					    -webkit-box-pack: center;
+					        -ms-flex-pack: center;
+					            justify-content: center;
 
 					.idx-link {
-						// width: 30px;
-  						// @include flex(1);
+						/* width: 30px;*/
+  						/* @include flex(1);*/
   						padding: 1rem;
   						padding-top: 0;
   						padding-bottom: 0;
@@ -814,11 +856,15 @@ a.mobile-version {
 				.idx-type-block {
 					@include display(flex);
 
-					// -ms-flex-wrap: wrap;
+					/* -ms-flex-wrap: wrap;*/
 
-					    // flex-wrap: wrap;
+					    /* flex-wrap: wrap;*/
 
-					    justify-content: center;
+					    -webkit-box-pack: center;
+
+					        -ms-flex-pack: center;
+
+					            justify-content: center;
 
 
 					.idx-link {
@@ -843,6 +889,17 @@ a.mobile-version {
 
 		background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/skulls.jpg) fixed;
 
+		.featured-img {
+  			@include display(flex);
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			
+			img {
+				width: 100%;
+				padding-bottom: 1.5rem;
+			}
+		}
 
 		a {
 			text-decoration: none !important;
@@ -882,22 +939,17 @@ a.mobile-version {
   			    flex-wrap: wrap;
   			-ms-flex-pack: distribute;
   			    justify-content: space-around;
-  			/* flex-basis: 300px;*/
 
   			.FLEX-ITEM {
 				width: 490px;
-				height: 330px;
-				// padding-right: 1rem;
+				height: 580px;
 				padding: 2rem;
-				/* border: 1px solid dodgerblue;*/
 				margin-bottom: 3rem;
 				text-align: center;
-				// background-color: lighten( #e3e3e3, 5% );
 
 
 				h3 {
 					text-align: center;
-					/* border: 1px solid red;*/
 					a {
 						font-size: 1.3rem ;
 
@@ -920,9 +972,7 @@ a.mobile-version {
 					    flex-wrap: wrap;
 
 					.idx-link {
-						// width: 30px;
   						@include flex(1);
-  						// flex-grow: 1;
 					}
 				}
 				.idx-price-block {
@@ -933,7 +983,6 @@ a.mobile-version {
 					    flex-wrap: wrap;
 
 					.idx-link {
-						// width: 30px;
   						@include flex(1);
 					}
 				}
@@ -944,7 +993,11 @@ a.mobile-version {
 
 					    flex-wrap: wrap;
 
-					    justify-content: center;
+					    -webkit-box-pack: center;
+
+					        -ms-flex-pack: center;
+
+					            justify-content: center;
 
 
 					.idx-link {

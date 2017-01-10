@@ -107,6 +107,25 @@ get_header('frontpage');
                                         <div class="">
 
                                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+
+                                             <?php if ( has_post_thumbnail() ) : ?> 
+                                                
+                                                <div class="featured-img">
+
+                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'custom-post-index', array('class' => 'img-responsive'));  ?></a>
+
+                                                </div>
+                                            <?php else : ?>
+
+                                                <div class="featured-img">
+                                               
+                                                    <a href="<?php the_permalink(); ?>" title=""><img class="img-responsive" src="/wp-content/uploads/2016/08/mical-default-img.jpg" alt=""></a>
+            
+                                                </div>
+
+                                            <?php endif; ?>
+
                                             <a class="btn" href="<?php the_permalink(); ?>" style="text-decoration: none;">
                                                 Click To See All Luxury High Rise Condos
                                             </a>
@@ -330,6 +349,24 @@ get_header('frontpage');
                                         <div class="">
 
                                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+                                            <?php if ( has_post_thumbnail() ) : ?> 
+                                                
+                                                <div class="featured-img">
+
+                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'large', array('class' => 'img-responsive'));  ?></a>
+
+                                                </div>
+                                            <?php else : ?>
+
+                                                <div class="featured-img">
+                                               
+                                                    <a href="<?php the_permalink(); ?>" title=""><img class="img-responsive" src="/wp-content/uploads/2016/08/mical-default-img.jpg" alt=""></a>
+            
+                                                </div>
+                                                
+                                            <?php endif; ?>
+
                                             <a class="btn" href="<?php the_permalink(); ?>" style="text-decoration: none;">
                                                 Click To See All Luxury High Rise Condos
                                             </a>
@@ -531,6 +568,25 @@ get_header('frontpage');
                                         <div class="">
 
                                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+                                            <?php if ( has_post_thumbnail() ) : ?> 
+                                                
+                                                <div class="featured-img">
+
+                                                    <!-- <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'full', array('class' => 'img-responsive'));  ?></a> -->
+                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'custom-post-index', array('class' => 'img-responsive'));  ?></a>
+
+                                                </div>
+                                            <?php else : ?>
+
+                                                <div class="featured-img">
+                                               
+                                                    <a href="<?php the_permalink(); ?>" title=""><img class="img-responsive" src="/wp-content/uploads/2016/08/mical-default-img.jpg" alt=""></a>
+            
+                                                </div>
+                                                
+                                            <?php endif; ?>
+
                                             <a class="btn" href="<?php the_permalink(); ?>" style="text-decoration: none;">
                                                 Click To See All Luxury High Rise Condos
                                             </a>

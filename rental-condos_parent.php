@@ -199,48 +199,6 @@ get_header();
             </div> <!-- End span12 -->
             <footer id="footer-wrapper-condos">
 
-                   <!-- <div id="footer" class="container hidden-phone hidden-tablet">
-
-                            <div class="row text-center">
-
-                                    <div class="span3">
-                                        <?php if ( ! dynamic_sidebar( 'footer-first-column' ) ) : ?>
-                                        <?php endif; ?>
-                                    </div>
-
-                                    <div class="span3">
-                                        <?php if ( ! dynamic_sidebar( 'footer-second-column' ) ) : ?>
-                                        <?php endif; ?>
-                                    </div>
-
-                                    <div class="clearfix visible-tablet"></div>
-
-                                    <div class="span3">
-                                        <?php if ( ! dynamic_sidebar( 'footer-third-column' ) ) : ?>
-                                        <?php endif; ?>
-                                    </div>
-
-                                    <div class="span3">
-                                        <?php if ( ! dynamic_sidebar( 'footer-fourth-column' ) ) : ?>
-                                        <?php endif; ?>
-                                    </div>
-                            </div>
-                           <div class="row text-center">
-                                    <div class="span6">
-                                        <?php
-                                        $copyright_text = get_option( 'theme_copyright_text' );
-                                        echo ( $copyright_text ) ? '<p class="copyright">' . $copyright_text . '</p>' : '';
-                                        ?>
-                                    </div>
-                                    <div class="span6">
-                                        <?php
-                                        $designed_by_text = get_option( 'theme_designed_by_text' );
-                                        echo ( $designed_by_text ) ? '<p class="designed-by">' . $designed_by_text . '</p>' : '';
-                                        ?>
-                                    </div>
-                            </div>                
-
-                    </div> -->
                     <div id="footer-bottom" class="row">
                         <div class="span1"></div>
                             <div class="span5">
@@ -256,7 +214,7 @@ get_header();
                                 ?>
                             </div>
                         <div class="span1"></div>    
-                    </div>                                   
+                    </div>                
 
             </footer><!-- End Footer -->
 
@@ -265,5 +223,5 @@ get_header();
 
     </div><!-- End Content -->
 
-            
+ <?php //get_footer(); ?>           
 
