@@ -94,7 +94,7 @@ if ( ! function_exists( 'load_theme_styles' ) ) {
 			wp_enqueue_style( 'parent-custom' );
 
 			//Load Child Theme stylesheet
-			wp_enqueue_style( 'moose-frame-style', get_stylesheet_uri(), '', '16.0' );
+			wp_enqueue_style( 'moose-frame-style', get_stylesheet_uri(), '', '17.0' );
 
 		}
 	}
@@ -392,6 +392,53 @@ add_filter('single_template', function($template) {
 });
 
 
+
+/**
+ *
+ * Adding SVG to WP
+ *
+ */
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+// function fix_svg_thumb_display() {
+//   echo '
+//     td.media-icon img[src$=".svg"], img[src$=".svg"].attachment-post-thumbnail { 
+//       width: 100% !important; 
+//       height: auto !important; 
+//     }
+//   ';
+// }
+// add_action('admin_head', 'fix_svg_thumb_display');
+
+
+
+/**
+ *
+ * Changing Excerpt Length
+ *
+ */
+function custom_excerpt_length( $length ) {
+	return 60;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+/*********************************/
+/* Change Search Button Text
+/**************************************/
+ 
+// Add to your child-theme functions.php
+add_filter('get_search_form', 'my_search_form_text');
+ 
+function my_search_form_text($text) {
+     $text = str_replace('value="Search"', 'value="SITE SEARCH"', $text); //set as value the text you want
+     return $text;
+}
+
+
 /**
  *
  * GETTING RENTAL CUSTOM POST CODE
@@ -399,7 +446,7 @@ add_filter('single_template', function($template) {
  */
 $THEME_DIR = get_stylesheet_directory();
 // echo $THEME_DIR;
-require_once $THEME_DIR . '/_moose-functions/functions-rentals.php';
+// require_once $THEME_DIR . '/_moose-functions/functions-rentals.php';
 // require_once $_SERVER['DOCUMENT_ROOT'] . get_template_directory_uri() . '/_moose-functions/functions-rentals.php';
 
 

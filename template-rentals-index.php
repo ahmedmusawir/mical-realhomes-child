@@ -368,7 +368,7 @@ get_header('frontpage');
                                             <?php endif; ?>
 
                                             <a class="btn" href="<?php the_permalink(); ?>" style="text-decoration: none;">
-                                                Click To See All Luxury High Rise Condos
+                                               Click To See All Rentals
                                             </a>
                                         </div>  
 
@@ -588,7 +588,7 @@ get_header('frontpage');
                                             <?php endif; ?>
 
                                             <a class="btn" href="<?php the_permalink(); ?>" style="text-decoration: none;">
-                                                Click To See All Luxury High Rise Condos
+                                                Click To See All Rentals
                                             </a>
                                         </div>  
 
