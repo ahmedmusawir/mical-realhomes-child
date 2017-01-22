@@ -354,7 +354,7 @@ get_header('frontpage');
                                                 
                                                 <div class="featured-img">
 
-                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'custom-post-index', array('class' => 'img-responsive'));  ?></a>
+                                                    <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'large', array('class' => 'img-responsive'));  ?></a>
 
                                                 </div>
                                             <?php else : ?>
@@ -372,8 +372,8 @@ get_header('frontpage');
                                             </a>
                                         </div>  
 
-                                        <!-- <h5 class="text-center">Search By Neighborhood</h5> -->
-                                        <!-- <hr> -->
+                                        <h5 class="text-center">Search By Neighborhood</h5>
+                                        <hr>
                                         <div class="search-block search-link-block">
                                             
                                             <article class="idx-link">
@@ -573,6 +573,7 @@ get_header('frontpage');
                                                 
                                                 <div class="featured-img">
 
+                                                    <!-- <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'full', array('class' => 'img-responsive'));  ?></a> -->
                                                     <a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail( 'custom-post-index', array('class' => 'img-responsive'));  ?></a>
 
                                                 </div>

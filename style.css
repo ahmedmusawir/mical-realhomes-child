@@ -819,10 +819,8 @@ a.mobile-version {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; }
-        #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-type-block .idx-link {
-          margin-top: 2.5rem; }
-          #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-type-block .idx-link .item {
-            padding: .5rem; }
+        #RENTAL-HOME-SINGLE-MAIN #RENTAL-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-type-block .idx-link .item {
+          padding: .5rem; }
 
 #RENTAL-HOME-REST-MAIN .FLEX-ITEM {
   background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/skulls.jpg) fixed; }
@@ -938,6 +936,178 @@ a.mobile-version {
         margin-top: 2.5rem; }
         #RENTAL-HOME-REST-MAIN #RENTAL-HOME-REST .FLEX-CONTAINER .FLEX-ITEM .idx-type-block .idx-link .item {
           padding: .5rem; }
+
+#FP-HOME-MAIN .FLEX-ITEM .featured-img {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  #FP-HOME-MAIN .FLEX-ITEM .featured-img img {
+    width: 100%;
+    padding-bottom: 1.5rem; }
+#FP-HOME-MAIN .FLEX-ITEM a {
+  text-decoration: none !important;
+  font-size: 1rem;
+  font-weight: 500; }
+  #FP-HOME-MAIN .FLEX-ITEM a:hover {
+    text-decoration: underline !important; }
+#FP-HOME-MAIN .FLEX-ITEM .btn {
+  border: 2px solid #578fbf;
+  background: #578fbf;
+  color: white; }
+  #FP-HOME-MAIN .FLEX-ITEM .btn:hover {
+    border: 2px solid #578fbf;
+    text-decoration: none !important;
+    background: transparent;
+    color: #578fbf; }
+#FP-HOME-MAIN #FP-HOME-SINGLE h1 {
+  padding-top: 1rem;
+  text-align: center;
+  text-decoration: underline;
+  font-family: "AdrianeLuxW01" !important;
+  font-weight: 300;
+  font-size: 2.8rem;
+  color: #2a3593 !important;
+  padding-bottom: 1.5rem; }
+#FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM {
+    width: 100%;
+    /* border: 1px solid dodgerblue;*/
+    margin-bottom: 3rem;
+    text-align: center;
+    /* background-color: lighten( #e3e3e3, 5% );*/
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
+    @media (max-width: 767px) {
+      #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM {
+        padding-top: 3rem; } }
+    #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM h3 {
+      text-align: center;
+      /* border: 1px solid red;*/ }
+      #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM h3 a {
+        font-size: 1.3rem; }
+    #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .btn {
+      border-radius: 0;
+      margin-bottom: 1.5rem; }
+    #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-block {
+      padding-top: 1rem; }
+    #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-link-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      /* -ms-flex-wrap: wrap;*/
+      /* flex-wrap: wrap;*/
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-link-block .idx-link {
+        /* width: 30px;*/
+        /* @include flex(1);*/
+        padding: 1rem;
+        padding-top: 0;
+        padding-bottom: 0; }
+    #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .search-block {
+      padding-top: 0rem; }
+    #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .search-link-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; }
+      #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .search-link-block .idx-link {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-direction: column;
+        padding: 1rem;
+        padding-top: 0;
+        padding-bottom: 0; }
+    #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-price-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; }
+      #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-price-block .idx-link {
+        padding: 1rem;
+        padding-top: 0;
+        padding-bottom: 0; }
+    #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-type-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      /* -ms-flex-wrap: wrap;*/
+      /* flex-wrap: wrap;*/
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      #FP-HOME-MAIN #FP-HOME-SINGLE .FLEX-CONTAINER .FLEX-ITEM .idx-type-block .idx-link .item {
+        padding: .5rem; }
 
 /**
  *
