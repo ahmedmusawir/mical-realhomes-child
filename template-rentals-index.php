@@ -15,6 +15,13 @@ get_header('frontpage');
     <div class="container contents single">
 
     </section>    
+<!--===================================
+= Btn For Mobile Linked to Home Rental  =
+====================================--> 
+
+<div class="mobile-btn visible-phone text-center">
+    <a class="btn" href="#RENTAL-HOME-SINGLE-MAIN" title="" style="text-decoration: none;">SEE ALL HOME RENTALS</a>
+</div>   
 
 <!--===================================
 =            Rental Condos            =

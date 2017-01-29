@@ -20,10 +20,6 @@ get_header('frontpage');
 
         <article class="span12 text-center">
 
-         <!-- <h3>Verbage Verbage Verbage Verbage Verbage Verbage Verbage Verbage </h3>
-         <h3>Verbage Verbage Verbage Verbage Verbage Verbage Verbage Verbage </h3>
-         <h3>Verbage Verbage Verbage Verbage </h3> -->
-            <!-- Moose Frontpage Top Widget -->
             <?php
             if ( ! dynamic_sidebar( 'frontpg-top-widget' ) ) :
             endif;
@@ -67,7 +63,7 @@ get_header('frontpage');
                     ?>
 
                 
-                    <article class="FLEX-CONTAINER" id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
 
 
                             <?php 
@@ -78,7 +74,7 @@ get_header('frontpage');
                                     while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
                                     <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
-                                    <div class="row-fluid main-loop ">
+                                    <div class="row-fluid main-loop FLEX-CONTAINER">
 
                                         <div class="span3">
                                                 
@@ -240,13 +236,14 @@ get_header('frontpage');
                                         
                                         <!--====  End of South Florida Link Variables  ====-->
                                         
-
+                                            
+            
                                         <!--======================================================
                                         =            South Florida Homes Links Block             =
                                         =======================================================-->
                                         <section class="FLEX-ITEM">
                                             <h5 class="text-center">Quick Search For Sale</h5>
-                                            <hr>
+                                            <!-- <hr> -->
                                             <div class="search-block search-link-block">
                                                 
                                                 <article class="idx-link">
@@ -300,9 +297,9 @@ get_header('frontpage');
                                                 </article>
 
                                             </div>
-                                            <hr>
+                                            <!-- <hr> -->
                                             <h5 class="text-center quick-rental-header">Quick Search For Rentals</h5>
-                                            <hr>
+                                            <!-- <hr> -->
                                             <div class="idx-block idx-price-block">
                                                 <article class="idx-link">
                                                     <a href="<?php echo $R_idx_price_url_1; ?>" title=""><?php echo $R_idx_price_link_text_1; ?></a>
@@ -329,6 +326,8 @@ get_header('frontpage');
                                         </section> <!-- END FLEX ITEM -->
 
                                         <!--====  End of South-florida-homes Links Block Ends  ====-->
+                                        
+
                                         
                                     </div>  <!-- END ROW FLUID -->      
                                         
