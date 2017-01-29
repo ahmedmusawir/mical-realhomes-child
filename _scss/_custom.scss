@@ -95,7 +95,7 @@ body {
 
 /**
  *
- * Frontpage Article Styles
+ * Frontpage Index Styles
  *
  */
 .page-id-1610 {
@@ -169,7 +169,82 @@ body {
 		 }
 	}	
 }
+/**
+ *
+ * Condo page Index Styles
+ *
+ */
+.post-type-archive-south-florida-condos {
 
+	.page-title {
+		 margin-bottom: -1rem;
+		 text-align: center;
+		 text-decoration: underline;
+		 font-family: "AdrianeLuxW01" !important;
+		 font-weight: 300;
+		 font-size: 2.8rem;
+		 color: #2a3593 !important;
+		 padding-bottom: 1.5rem;
+		 // background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/title-underline-img.jpg) center bottom no-repeat;
+		
+		@media ( max-width: 600px ) {
+			font-size: 2rem;
+			padding-bottom: .8rem;
+		 	// background: url(http://fortlauderdale-properties.com/wp-content/uploads/2016/12/NEW-underline-300.jpg) center bottom no-repeat;
+		}
+	}
+
+	.post-title {
+		
+		padding-bottom: 1rem;
+		padding-left: 6%;
+
+		a {
+			text-decoration: none; 
+			padding-bottom: 1.5rem;
+		}
+
+		@media ( max-width: 767px ) {
+			padding-left: 0;
+			text-align: center;
+		}
+	}	
+
+	.btn {
+	
+		border: 2px solid $mical-mid-blue;
+		background: $mical-mid-blue;
+		color: white;
+
+		&:hover {
+
+			border: 2px solid $mical-mid-blue;
+			background: transparent;
+			color: $mical-mid-blue;				
+		}
+	}
+
+	.rope-holder {
+
+		 @include display(flex);
+		 @include justify-content(flex-start);
+		 margin-top: -2.6rem;
+		 margin-bottom: -1.5rem;
+
+		 img {
+		 	padding-bottom: 2rem;
+		 }	
+		 object {
+		 	padding-bottom: 2rem;
+		 }	
+
+		 @media ( max-width: 767px ) {
+		 	
+		 	@include justify-content(center);
+
+		 }
+	}	
+}
 /**
  *
  * Container Fix for Mobile

@@ -249,7 +249,7 @@ get_header('frontpage');
                                                 <article class="idx-link">
                                                     <a href="<?php echo $neighborhood_url_1;  ?>" title=""><?php echo $neighborhood_link_text_1; ?></a>
                                                     <a href="<?php echo $neighborhood_url_6;  ?>" title=""><?php echo $neighborhood_link_text_6; ?></a>
-                                                    <a href="<?php echo $neighborhood_url_1;  ?>" title=""><?php echo $neighborhood_link_text_1; ?></a>
+                                                    <a href="<?php echo $neighborhood_url_11;  ?>" title=""><?php echo $neighborhood_link_text_11; ?></a>
                                                 </article>
                                                 <article class="idx-link">
                                                     <a href="<?php echo $neighborhood_url_2;  ?>" title=""><?php echo $neighborhood_link_text_2; ?></a>
