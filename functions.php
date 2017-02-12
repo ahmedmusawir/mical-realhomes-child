@@ -94,7 +94,7 @@ if ( ! function_exists( 'load_theme_styles' ) ) {
 			wp_enqueue_style( 'parent-custom' );
 
 			//Load Child Theme stylesheet
-			wp_enqueue_style( 'moose-frame-style', get_stylesheet_uri(), '', '19.0' );
+			wp_enqueue_style( 'moose-frame-style', get_stylesheet_uri(), '', '22.0' );
 
 		}
 	}

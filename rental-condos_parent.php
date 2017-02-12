@@ -8,7 +8,7 @@ get_header();
 
     <!-- Page Head -->
     <?php get_template_part("banners/default_page_banner"); ?>
-<!-- <h1>Home Parent (Condo city Template)</h1> -->
+<!-- <h1>Rental Condo Parent </h1> -->
     <!-- Content -->
     <div class="container contents single">
 

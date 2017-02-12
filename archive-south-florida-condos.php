@@ -21,8 +21,8 @@ get_header('frontpage');
         <article class="span12 text-center">
 
             <?php
-            if ( ! dynamic_sidebar( 'frontpg-top-widget' ) ) :
-            endif;
+            //if ( ! dynamic_sidebar( 'frontpg-top-widget' ) ) :
+            //endif;
             ?>
                 
         </article>
@@ -73,7 +73,8 @@ get_header('frontpage');
                                     while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
                                     <!-- <h3 class="post-title"><?php the_title(); ?></h3> -->
-                                    <div class="row-fluid main-loop FLEX-CONTAINER">
+                                    <!-- <div class="row-fluid main-loop FLEX-CONTAINER"> -->
+                                    <div class="row-fluid main-loop">
 
                                         <div class="span3">
                                                 
@@ -236,7 +237,7 @@ get_header('frontpage');
                                         <!--====  End of South Florida Link Variables  ====-->
                                         
                                             
-            
+                                        <div class="span12 FLEX-CONTAINER">
                                         <!--======================================================
                                         =            South Florida Homes Links Block             =
                                         =======================================================-->
@@ -323,6 +324,9 @@ get_header('frontpage');
                                             </div>
 
                                         </section> <!-- END FLEX ITEM -->
+
+                                        </div> <!-- End FLEX-CONTAINER Safari Bugfix-->
+                                        
 
                                         <!--====  End of South-florida-homes Links Block Ends  ====-->
                                         

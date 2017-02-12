@@ -1,7 +1,7 @@
 /*
-Theme Name: Hertz Realty
+Theme Name: Hertz Realty 2.0
 Theme URI: http://www.htmlfivedev.com
-Description: Customized for Hertz Realty
+Description: Customized for Hertz Realty. This is the NEW One
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, post-formats, responsive-layout, theme-options, translation-ready
 Author: Ahmed Rahat Musawir (Da Moose)
 Author URI: https://www.linkedin.com/in/ahmedmusawir
@@ -129,6 +129,14 @@ body {
   body p {
     font-size: 1.1rem !important;
     font-weight: 300; }
+
+/**
+ *
+ * Page Header Image
+ *
+ */
+.page .page-head {
+  background-position: center bottom !important; }
 
 /**
  *
@@ -395,18 +403,20 @@ a.mobile-version {
 .frontpage-top-widget {
   /* min-height: 150px;*/
   text-align: center; }
-  .frontpage-top-widget #text-5 {
+  .frontpage-top-widget .widget.widget_text {
     padding-bottom: 0;
     margin: 0;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
     border: 0px solid blue;
     background: transparent !important; }
-    .frontpage-top-widget #text-5 h3 {
+    .frontpage-top-widget .widget.widget_text h3 {
       line-height: 2rem;
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 2.5rem; }
       @media (max-width: 750px) {
-        .frontpage-top-widget #text-5 h3 {
+        .frontpage-top-widget .widget.widget_text h3 {
           font-size: 1.5rem; } }
 
 #frontpg-bird {
@@ -624,11 +634,12 @@ a.mobile-version {
     text-decoration: underline;
     font-family: "AdrianeLuxW01" !important;
     font-weight: 300;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     line-height: 3rem;
     color: #2a3593 !important;
     padding-top: 1rem;
-    padding-bottom: .5rem; }
+    padding-bottom: .5rem;
+    margin-top: -1.5rem; }
   #RENTAL-CONDO-MAIN #RENTAL-CONDO .FLEX-CONTAINER {
     display: -webkit-box;
     display: -moz-box;
@@ -753,7 +764,7 @@ a.mobile-version {
     text-decoration: underline;
     font-family: "AdrianeLuxW01" !important;
     font-weight: 300;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     line-height: 3rem;
     color: #2a3593 !important;
     padding-top: .5rem;

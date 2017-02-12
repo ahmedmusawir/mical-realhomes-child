@@ -47,6 +47,18 @@ body {
 
 /**
  *
+ * Page Header Image
+ *
+ */
+.page {
+	.page-head {
+		// border: 2px solid red;
+		background-position: center bottom !important;
+	}
+} 
+
+/**
+ *
  * Main border Removal
  *
  */
@@ -335,9 +347,11 @@ a.mobile-version {
 	/* min-height: 150px;*/
 	// margin-top: -4rem !important;
 	text-align: center;
-	#text-5 {
+	.widget.widget_text {
 		padding-bottom: 0; 
 		margin: 0;
+		margin-top: -1rem;
+		margin-bottom: 1rem;
 		border: 0px solid blue;
 		background: transparent !important;
 		h3 {
@@ -696,11 +710,12 @@ a.mobile-version {
 			 text-decoration: underline;
 			 font-family: "AdrianeLuxW01" !important;
 			 font-weight: 300;
-			 font-size: 2.8rem;
+			 font-size: 2.6rem;
 			 line-height: 3rem;
 			 color: #2a3593 !important;
 			 padding-top: 1rem;
 			 padding-bottom: .5rem;
+			 margin-top: -1.5rem;
 
 		}
 
@@ -850,7 +865,7 @@ a.mobile-version {
 			 text-decoration: underline;
 			 font-family: "AdrianeLuxW01" !important;
 			 font-weight: 300;
-			 font-size: 2.8rem;
+			 font-size: 2.6rem;
 			 line-height: 3rem;
 			 color: #2a3593 !important;
 			 padding-top: .5rem;
